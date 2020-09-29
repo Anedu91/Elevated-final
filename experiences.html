@@ -1,0 +1,326 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEVATED</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="dashboard-page">
+	<div id="wrapper">
+		<header id="header" class="header__border-bottom">
+			<div class="row">
+				<div class="columns small-6 medium-3">
+					<strong class="logo">
+						<a href="#">
+							<picture>
+								<source srcset="images/logo04.webp" type="image/webp">
+								<source srcset="images/logo04.png" type="image/png"> 
+								<img class="lazyload" data-src="images/logo04.png" alt="ELEVATED">
+							</picture>
+						</a>
+					</strong>
+				</div>
+				<div class="columns small-6 medium-9">
+					<nav class="navigation">
+            <a href="#" class="navigation__opener"><span></span></a>
+            <span class="navigation__current">Experiences</span>
+						<div class="navigation__drop">
+							<a href="#" class="navigation__close"><span class="icon-cross"></span></a>
+							<ul class="navbar">
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link">Browse Experiences</a>
+								</li>
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link navbar__link--active">Create Event</a>
+								</li>
+							</ul>
+							<div class="navbar-menu">
+								<a href="" class="navigation__avatar">									
+								</a>
+								<div class="navbar-menu__container">
+									<div class="navbar-menu__header">
+										<span>John Jacob</span>
+									</div>
+									<ul class="navbar-menu__nav">
+										<li class="navbar-menu__item">
+											<a href="dashboard.html" class="navbar-menu__link">
+												<img src="images/dashboard.svg" alt="dashboard">
+												Dashboard
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="name-experience.html" class="navbar-menu__link">
+												<img src="images/profile.svg" alt="dashboard">
+												My Profile
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="experiences.html" class="navbar-menu__link">
+												<img src="images/experience.svg" alt="dashboard">
+												My Exoeriences
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="payment.html" class="navbar-menu__link">
+												<img src="images/settings.svg" alt="dashboard">
+												Settings
+											</a>
+										</li>
+										<li class="navbar-menu__item border-top">
+											<a href="chat.html" class="navbar-menu__link">
+												<img src="images/logout.svg" alt="dashboard">
+												Logout
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div class="row">
+				<div class="experiences-content">
+					<div class="steps steps--dashboard">
+						<ul>
+							<li class=""><span class="steps__icon"><img src="images/dashboard.svg" alt=""></span><span class="steps__text">Dashboard</span></li>
+							<li class="current"><span class="steps__icon"><img src="images/experience.svg" alt=""></span><span class="steps__text">Experiences</span></li>
+							<li><span class="steps__icon"><img src="images/payment.svg" alt=""></span><span class="steps__text">Payment</span></li>
+						</ul>
+          </div>
+          <div class="dashboard-content">
+            <section class="head head--experiences">
+              <button class="button primary large" type="submit">&#43; Create Experience</button>
+            </section>
+            <section class="experiences-dashboard">
+              <div class="experiences-dashboard__header">
+                <h3 class="dashboard__title">Experiences</h3>
+                <div class="experiences-dashboard__filter">
+                  <span>Filter by</span>
+                  <select class="experiences-filter">
+                    <option value="husker">All experiences</option>
+                    <option value="starbuck">Starbuck</option>
+                    <option value="hotdog">Hot Dog</option>
+                    <option value="apollo">Apollo</option>
+                  </select>
+                </div>
+              </div>
+              <ul class="table-exp">
+                <li class="table-exp__item header">
+                  <span class="table-exp__column name">Name</span>
+                  <span class="table-exp__column date">Date</span>
+                  <span class="table-exp__column time">Time</span>
+                  <span class="table-exp__column attend">Attendees</span>
+                  <span class="table-exp__column ticket-o">Tickets Open</span>
+                  <span class="table-exp__column total">Total $</span>
+                  <span class="table-exp__column type">Type</span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind</span>
+                  <span class="table-exp__column date">May 6, 2018</span>
+                  <span class="table-exp__column time">12:00 PM</span>
+                  <span class="table-exp__column attend">132</span>
+                  <span class="table-exp__column ticket-o">5</span>
+                  <span class="table-exp__column total">$14.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge consultation">1:1 consultation</span>
+                    <button class="table__button" type="button" data-toggle="1item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="1item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">Another title of event here</span>
+                  <span class="table-exp__column date">weekly</span>
+                  <span class="table-exp__column time">Multiple</span>
+                  <span class="table-exp__column attend">13</span>
+                  <span class="table-exp__column ticket-o">unlimited</span>
+                  <span class="table-exp__column total">$8.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge group">group</span>
+                    <button class="table__button" type="button" data-toggle="2item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="2item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind vol2</span>
+                  <span class="table-exp__column date">completed</span>
+                  <span class="table-exp__column time">3:00 PM</span>
+                  <span class="table-exp__column attend">20</span>
+                  <span class="table-exp__column ticket-o">12</span>
+                  <span class="table-exp__column total">$1.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge conference">conference</span>
+                    <button class="table__button" type="button" data-toggle="3item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="3item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind</span>
+                  <span class="table-exp__column date">monthly</span>
+                  <span class="table-exp__column time">Multiple</span>
+                  <span class="table-exp__column attend">20</span>
+                  <span class="table-exp__column ticket-o">sold out</span>
+                  <span class="table-exp__column total">$1.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge webinar">webinar</span>
+                    <button class="table__button" type="button" data-toggle="4item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="4item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind</span>
+                  <span class="table-exp__column date">May 6, 2018</span>
+                  <span class="table-exp__column time">12:00 PM</span>
+                  <span class="table-exp__column attend">132</span>
+                  <span class="table-exp__column ticket-o">5</span>
+                  <span class="table-exp__column total">$14.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge consultation">1:1 consultation</span>
+                    <button class="table__button" type="button" data-toggle="4item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="4item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind</span>
+                  <span class="table-exp__column date">May 6, 2018</span>
+                  <span class="table-exp__column time">12:00 PM</span>
+                  <span class="table-exp__column attend">132</span>
+                  <span class="table-exp__column ticket-o">5</span>
+                  <span class="table-exp__column total">$14.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge consultation">1:1 consultation</span>
+                    <button class="table__button" type="button" data-toggle="1item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="1item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">Another title of event here</span>
+                  <span class="table-exp__column date">weekly</span>
+                  <span class="table-exp__column time">Multiple</span>
+                  <span class="table-exp__column attend">13</span>
+                  <span class="table-exp__column ticket-o">unlimited</span>
+                  <span class="table-exp__column total">$8.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge group">group</span>
+                    <button class="table__button" type="button" data-toggle="2item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="2item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind vol2</span>
+                  <span class="table-exp__column date">completed</span>
+                  <span class="table-exp__column time">3:00 PM</span>
+                  <span class="table-exp__column attend">20</span>
+                  <span class="table-exp__column ticket-o">12</span>
+                  <span class="table-exp__column total">$1.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge conference">conference</span>
+                    <button class="table__button" type="button" data-toggle="3item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="3item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind</span>
+                  <span class="table-exp__column date">monthly</span>
+                  <span class="table-exp__column time">Multiple</span>
+                  <span class="table-exp__column attend">20</span>
+                  <span class="table-exp__column ticket-o">sold out</span>
+                  <span class="table-exp__column total">$1.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge webinar">webinar</span>
+                    <button class="table__button" type="button" data-toggle="4item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="4item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name">How to change your mind</span>
+                  <span class="table-exp__column date">May 6, 2018</span>
+                  <span class="table-exp__column time">12:00 PM</span>
+                  <span class="table-exp__column attend">132</span>
+                  <span class="table-exp__column ticket-o">5</span>
+                  <span class="table-exp__column total">$14.000.000</span>
+                  <span class="table-exp__column type">
+                    <span class="table__badge consultation">1:1 consultation</span>
+                    <button class="table__button" type="button" data-toggle="4item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="4item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Details</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Edit Experience</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Unpublish</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+              </ul>
+            </section>
+          </div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/jquery.main.js"></script>
+  <script src="js/lazysizes.min.js"></script>
+</body>
+</html>

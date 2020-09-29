@@ -1,0 +1,408 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEVATED</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="dashboard-page">
+	<div id="wrapper">
+		<header id="header" class="header__border-bottom">
+			<div class="row">
+				<div class="columns small-6 medium-3">
+					<strong class="logo">
+						<a href="#">
+							<picture>
+								<source srcset="images/logo04.webp" type="image/webp">
+								<source srcset="images/logo04.png" type="image/png"> 
+								<img class="lazyload" data-src="images/logo04.png" alt="ELEVATED">
+							</picture>
+						</a>
+					</strong>
+				</div>
+				<div class="columns small-6 medium-9">
+          <nav class="navigation">
+            <a href="#" class="navigation__opener"><span></span></a>
+            <span class="navigation__current">Dashboard</span>
+						<div class="navigation__drop">
+							<a href="#" class="navigation__close"><span class="icon-cross"></span></a>
+							<ul class="navbar">
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link">Browse Experiences</a>
+								</li>
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link navbar__link--active">Create Event</a>
+								</li>
+							</ul>
+							<div class="navbar-menu">
+								<a href="" class="navigation__avatar">									
+								</a>
+								<div class="navbar-menu__container">
+									<div class="navbar-menu__header">
+										<span>John Jacob</span>
+									</div>
+									<ul class="navbar-menu__nav">
+										<li class="navbar-menu__item">
+											<a href="dashboard.html" class="navbar-menu__link">
+												<img src="images/dashboard.svg" alt="dashboard">
+												Dashboard
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="name-experience.html" class="navbar-menu__link">
+												<img src="images/profile.svg" alt="dashboard">
+												My Profile
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="experiences.html" class="navbar-menu__link">
+												<img src="images/experience.svg" alt="dashboard">
+												My Exoeriences
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="payment.html" class="navbar-menu__link">
+												<img src="images/settings.svg" alt="dashboard">
+												Settings
+											</a>
+										</li>
+										<li class="navbar-menu__item border-top">
+											<a href="chat.html" class="navbar-menu__link">
+												<img src="images/logout.svg" alt="dashboard">
+												Logout
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div class="row">
+				<div class="experiences-content">
+					<div class="steps steps--dashboard">
+						<ul>
+							<li class="current"><span class="steps__icon"><img src="images/dashboard.svg" alt=""></span><span class="steps__text">Dashboard</span></li>
+							<li><span class="steps__icon"><img src="images/experience.svg" alt=""></span><span class="steps__text">Experiences</span></li>
+							<li><span class="steps__icon"><img src="images/payment.svg" alt=""></span><span class="steps__text">Payment</span></li>
+						</ul>
+          </div>
+          <div class="dashboard-content">
+            <section class="head">
+              <h3 class="dashboard__title">Total Numbers for All Events</h3>
+              <button class="button primary large" type="submit">&#43; Create Experience</button>
+            </section>
+            <section class="dashboard-chart">
+              <div class="dashboard-chart__item">
+                <div class="dashboard-chart__container">
+                  <canvas id="ticketChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title primary">
+                    <span>Total</span>
+                    <span>Tickets Sold</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    $ <span>12,000</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dashboard-chart__item">
+                <div class="dashboard-chart__container">
+                  <canvas id="incomeChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title secondary">
+                    <span>Total</span>
+                    <span>Income</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    $ <span>12,000</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dashboard-chart__item">
+                <div class="dashboard-chart__container">
+                  <canvas id="uniqueChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title tertiary">
+                    <span>Total</span>
+                    <span>Unique Views</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    + <span>12,000</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dashboard-chart__item">
+                
+                <div class="dashboard-chart__container">
+                  <canvas id="impressionChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title forty">
+                    <span>Total</span>
+                    <span>Impressions</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    + <span>112,000</span>
+                  </span>
+                </div>
+              </div>
+            </section>
+            <section class="dashboard">
+                <div class="dashboard--white">
+                  <h3 class="dashboard__title">More Details</h3>
+                  <div class="row  ">
+                    <div class="columns large-6 medium-12 small-12">
+                      <div class="status dashboard--gray">
+                        <div class="status__item">
+                          <p class="status__title">Today's total purchases <span class="status__number">122</span></p>
+                          <img src="images/status-green.svg" alt="Status green" class="status__img status__img--green">
+                        </div>
+                        <div class="status__item">
+                          <p class="status__title">Customers This Month<span class="status__number">1,321</span></p>
+                          <img src="images/status-red.svg" alt="Status green" class="status__img status__img--green">
+                        </div>
+                        <div class="status__item">
+                          <p class="status__title">Refunds This Month<span class="status__number">$15,129.81</span></p>
+                          <img src="images/status-green.svg" alt="Status green" class="status__img status__img--green">
+                        </div>
+                      </div>
+                      <div class="dashboard__experiences">
+                         <h3 class="dashboard__title">Experiences</h3>
+                         <ul class="dashboard__experiences-list">
+                           <li>Total # of experiences <span>23</span></li>
+                           <li>Experiences currently open <span>10</span></li>
+                         </ul>
+                      </div>
+                    </div>
+                    <div class="columns large-6 medium-12 small-12 dashboard__rating status status--gray">
+                      <div class="status__item">
+                        <p class="status__title">Overall Audience Ratings</p>
+                          <select class="dashboard">
+                            <option value="husker">All experiences</option>
+                            <option value="starbuck">Starbuck</option>
+                            <option value="hotdog">Hot Dog</option>
+                            <option value="apollo">Apollo</option>
+                          </select>
+                        </div>
+                        <div class="status__item">
+                          <span class="status__audience-rating danger">-2.5%</span>
+                        
+                            <div class="progress__bar">
+                              <svg class="progress__circle">
+                                <circle cx="150" cy="125" r="100"></circle>
+                                <circle class="progress-rating" cx="150" cy="125" r="100"></circle>
+                              </svg>
+                              <div class="progress__number">
+                                <ul class="reviews__ratings">
+                                  <li><img src="images/star-filled.svg" alt="img description"></li>
+                                  <li><img src="images/star-filled.svg" alt="img description"></li>
+                                  <li><img src="images/star-filled.svg" alt="img description"></li>
+                                  <li><img src="images/star-filled.svg" alt="img description"></li>
+                                  <li><img src="images/star-half.svg" alt="img description"></li>
+                                </ul>
+                                <span>4.5</span>
+                              </div>
+                            </div>
+                      </div>
+                      <div class="status__item">
+                        <p class="status__title">Last Week<span class="status__number">12 participants reviewed</span></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dashboard__updates  dashboard--white">
+                  <h3 class="dashboard__title">Latest Updates <span class="dashboard__title-info">8</span></h3>                  
+                  <ul class="table">
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event Goes Right Here.
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--danger">Refund</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event Goes Right Here.
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--update">Update</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event Goes Right Here.
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--purchased">Purchased</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event Goes Right Here. Another test for propuse  
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--danger">Refund</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--danger">Refund</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event Goes Right Here.
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--danger">Refund</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event Goes Right Here.
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--danger">Refund</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                    <li class="table__item">
+                      <span class="table__name-item">Name of Event Goes Right Here.
+                        <span class="table__description">Dorris G. wants a refund.</span>
+                      </span>
+                      <span class="table__status table__status--danger">Refund</span>
+                      <span class="table__date">March 25, 2020</span>
+                    </li>
+                  </ul>
+                </div>
+            </section>
+          </div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/js/foundation.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/daterangepicker.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/jquery.main.js"></script>
+  <script src="js/lazysizes.min.js"></script>
+  <script>
+
+    const progressRating = document.querySelector('.progress-rating');
+    const barPercent = 75;
+
+    progressRating.style.strokeDashoffset = `calc(628 - (628 * ${barPercent})/100`;
+
+
+
+
+
+
+
+
+
+    const ctx1 = document.getElementById('ticketChart').getContext('2d');
+    const ctx2 = document.getElementById('incomeChart').getContext('2d');
+    const ctx3 = document.getElementById('uniqueChart').getContext('2d');
+    const ctx4 = document.getElementById('impressionChart').getContext('2d');
+
+
+    
+    const lineOptions = {
+      legend: {
+            display: false
+          },
+          scales:{
+            yAxes: [{
+              display: false,
+              gridLines:{
+                drawOnChartArea: false
+              }
+            }],
+            xAxes: [{
+              display: false
+            }]
+          }
+    }
+    const labels = ["1", "2", "3", "4", "5", "6"];
+
+
+    const ticketChart = new Chart(ctx1, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(142,183,255,.6)",
+                  borderColor: "#8EB7FF",
+                  data: [65, 59, 80, 81, 56, 100, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+    const incomeChart = new Chart(ctx2, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(135,70,234,.6)",
+                  borderColor: "#8746EA",
+                  data: [65, 59, 80, 81, 56, 80, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+    const uniqueChart = new Chart(ctx3, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(16,222,139,.6)",
+                  borderColor: "#10DE8B",
+                  data: [65, 59, 80, 81, 56, 70, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+    const impressionChart = new Chart(ctx4, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(255,102,108,.6)",
+                  borderColor: "#FF666C",
+                  data: [65, 59, 80, 81, 56, 60, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+
+
+
+    </script>
+</body>
+</html>

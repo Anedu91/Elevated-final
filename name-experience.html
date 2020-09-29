@@ -1,0 +1,599 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEVATED</title>
+  <link rel="stylesheet" href="css/vendors/quill.snow.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="dashboard-page">
+	<div id="wrapper">
+		<header id="header" class="header__border-bottom">
+			<div class="row">
+				<div class="columns small-6 medium-3">
+					<strong class="logo">
+						<a href="#">
+							<picture>
+								<source srcset="images/logo04.webp" type="image/webp">
+								<source srcset="images/logo04.png" type="image/png"> 
+								<img class="lazyload" data-src="images/logo04.png" alt="ELEVATED">
+							</picture>
+						</a>
+					</strong>
+				</div>
+				<div class="columns small-6 medium-9">
+					<nav class="navigation">
+            <a href="#" class="navigation__opener"><span></span></a>
+            <span class="navigation__current">Experiences</span>
+						<div class="navigation__drop">
+							<a href="#" class="navigation__close"><span class="icon-cross"></span></a>
+							<ul class="navbar">
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link">Browse Experiences</a>
+								</li>
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link navbar__link--active">Create Event</a>
+								</li>
+							</ul>
+							<div class="navbar-menu">
+								<a href="" class="navigation__avatar">									
+								</a>
+								<div class="navbar-menu__container">
+									<div class="navbar-menu__header">
+										<span>John Jacob</span>
+									</div>
+									<ul class="navbar-menu__nav">
+										<li class="navbar-menu__item">
+											<a href="dashboard.html" class="navbar-menu__link">
+												<img src="images/dashboard.svg" alt="dashboard">
+												Dashboard
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="name-experience.html" class="navbar-menu__link">
+												<img src="images/profile.svg" alt="dashboard">
+												My Profile
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="experiences.html" class="navbar-menu__link">
+												<img src="images/experience.svg" alt="dashboard">
+												My Exoeriences
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="payment.html" class="navbar-menu__link">
+												<img src="images/settings.svg" alt="dashboard">
+												Settings
+											</a>
+										</li>
+										<li class="navbar-menu__item border-top">
+											<a href="chat.html" class="navbar-menu__link">
+												<img src="images/logout.svg" alt="dashboard">
+												Logout
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div class="row">
+				<div class="experiences-content">
+					<div class="steps steps--dashboard">
+						<ul>
+							<li class=""><span class="steps__icon"><img src="images/dashboard.svg" alt=""></span><span class="steps__text">Dashboard</span></li>
+							<li class="current"><span class="steps__icon"><img src="images/experience.svg" alt=""></span><span class="steps__text">Experiences</span></li>
+							<li><span class="steps__icon"><img src="images/payment.svg" alt=""></span><span class="steps__text">Payment</span></li>
+						</ul>
+          </div>
+          <div class="dashboard-content">
+            <section class="head">
+              <div class="breadcrumb">
+                <ul class="breadcrumb__list">
+                  <li class="breadcrumb__item arrow">
+                    <a href="" class="breadcrumb__link">Experiences</a>
+                  </li>
+                  <li class="breadcrumb__item arrow">
+                    <a href="" class="breadcrumb__link disable">Name of Event</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="breadcrumb-network">
+                <ul class="breadcrumb__list">
+                  <li class="breadcrumb__item line">
+                    <span class="breadcrumb__span">Connect to</span> <a href="#" class="breadcrumb__img"><img src="images/facebook-logo.png" alt="facebook logo"></a> <a href="#" class="breadcrumb__img"><img src="images/eventbride-logo.png" alt="event bride logo"></a>
+                  </li>
+                  <li class="breadcrumb__item line">
+                    <a href="#">view event page</a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+            <section class="dashboard-chart">
+              <div class="dashboard-chart__item">
+                <div class="dashboard-chart__container">
+                  <canvas id="ticketChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title primary">
+                    <span>Total</span>
+                    <span>Tickets Sold</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    $ <span>12,000</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dashboard-chart__item">
+                <div class="dashboard-chart__container">
+                  <canvas id="incomeChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title secondary">
+                    <span>Total</span>
+                    <span>Income</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    $ <span>12,000</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dashboard-chart__item">
+                <div class="dashboard-chart__container">
+                  <canvas id="uniqueChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title tertiary">
+                    <span>Total</span>
+                    <span>Unique Views</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    + <span>12,000</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dashboard-chart__item">
+                
+                <div class="dashboard-chart__container">
+                  <canvas id="impressionChart" width="100" height="100"></canvas>
+                </div>
+                <div class="dashboard-chart__content">
+                  <h6 class="dashboard-chart__title forty">
+                    <span>Total</span>
+                    <span>Impressions</span>
+                  </h6>
+                  <span class="dashboard-chart__number">
+                    + <span>112,000</span>
+                  </span>
+                </div>
+              </div>
+              <div class="dashboard-chart__item engagement">
+                <p class="dashboard-chart__paragraph">Overall Engagement:</p>
+                <div class="dashboard-chart__engagement">
+                  <div class="dashboard-chart__enga-item popup" >
+                    <img src="images/QA.svg" class="dashboard__icon popup__opener" alt="QA">
+                    <span class="dashboard-chart__amount" data-tooltip tabindex="1" title="Number of people who asked questions" data-position="top" data-alignment="right">(8)</span>
+                    <div class="popup__holder">
+                      <div class="popup__frame">
+                        <div class="popup__wrap">
+                          <div class="popup__box">
+                            <header class="popup__head">
+                              <h3 class="h4">(<span>8</span>) Questions by Attendee</h3>
+                              <a href="#" class="popup__close"><span class="icon-cross"></span></a>
+                            </header>
+                            <div class="popup__content popup__content--dashboard">
+                              <div class="dashboard__form-header">
+                                <figure class="dashboard__form-figure"><img src="images/avatar01.png" alt="img description"></figure>
+																<div class="dashboard__form-text">
+																  <strong class="">Maria Junot (UX Designer)</strong>
+                                  <p class="">An American author, journalist, activist, and Professor of Practice of Non-Fiction at Harvard.</p>
+                                  <a href="">view profile</a>
+																</div>
+                              </div>
+                              <form action="" class="dashboard__form">
+                                <div class="dashboard__form-input">
+                                  <label for="rel01">1. Here goes the first questions that Maria Asked?</label>
+                                    <textarea class="" id="rel01" type="text" placeholder="Write your answer"></textarea>
+                                </div>
+                                <div class="dashboard__form-input">
+                                  <label for="rel01">2. Here goes the second question that maria Asked? This would be a longer question but should probably cap at 140 chartacters.</label>
+                                    <textarea class="" id="rel01" type="text" placeholder="Write your answer"></textarea>
+                                </div>
+                                <button class="dashboard__form-button">Send Message</button>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dashboard-chart__enga-item popup" >
+                    <img src="images/meeting.svg" class="dashboard__icon popup__opener" alt="QA">
+                    <span class="dashboard-chart__amount" data-tooltip tabindex="1" title="Number of people who asked questions" data-position="top" data-alignment="right">(8)</span>
+                    <div class="popup__holder">
+									<div class="popup__frame">
+										<div class="popup__wrap">
+											<div class="popup__box">
+												<header class="popup__head">
+													<h3 class="h4">Attendee Rquested Meeting</h3>
+													<a href="#" class="popup__close"><span class="icon-cross"></span></a>
+												</header>
+												<div class="popup__content popup__content--dashboard">
+                          <div class="dashboard__form-header">
+                            <figure class="dashboard__form-figure"><img src="images/avatar01.png" alt="img description"></figure>
+                            <div class="dashboard__form-text">
+                              <strong class="">Maria Junot (UX Designer)</strong>
+                              <p class="">An American author, journalist, activist, and Professor of Practice of Non-Fiction at Harvard.</p>
+                              <a href="">view profile</a>
+                            </div>
+                          </div>                            
+                          <form action="" class="dashboard__form form">
+                            <div class="dashboard__form-input">
+                              <strong>Message:</strong>
+                              <p>"When Requesting a meeting. User was allowed to write a shor message for the hast, to share a little insight on what he/she would like to meet about."</p>
+                            </div>
+                            <div class="dashboard__form-input">
+                              <strong>Day preference</strong>
+                              <div class="dashboard__form-checks">
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Mondays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Tuesdays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Wednesdays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Thursdays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Fridays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Saturdays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Sundays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">No Preference</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="dashboard__form-input">
+                              <strong>Time Preference</strong>
+                              <div class="dashboard__form-checks">
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Mondays</span>
+                                </label>
+                                <label class="custom-checkbox">
+                                  <input type="checkbox">
+                                  <span class="custom-input"></span>
+                                  <span class="custom-label">Tuesdays</span>
+                                </label>
+                              </div>
+                            </div>
+                            <div class="dashboard__form-input">
+                              <label for="rel01"><strong>Reply to Request</strong>
+                                <textarea class="" id="rel01" type="text" placeholder="Write your answer"></textarea>
+                            </div>
+                            <button class="dashboard__form-button">Send Message</button>
+                        </form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+                  </div>
+                  <div class="dashboard-chart__enga-item" >
+                    <img src="images/poll.svg" class="dashboard__icon" alt="QA">
+                    <span class="dashboard-chart__amount" data-tooltip tabindex="1" title="Number of people who asked questions" data-position="top" data-alignment="right">(8)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="dashboard-chart__item">
+                <p class="dashboard-chart__flexp dashboard-chart__paragraph">Check-in Count: <span>90</span></p>
+              </div>
+              <div class="dashboard-chart__item">
+                <p class="dashboard-chart__flexp dashboard-chart__paragraph">Check-Out Count: <span>90</span></p>
+              </div>
+            </section>
+            <section class="experiences-dashboard">
+              <div class="experiences-dashboard__header popup">
+                <h3 class="dashboard__title">Attendees List</h3>
+                <div class="experiences-dashboard__filter">
+                  <span>Filter by</span>
+                  <select class="experiences-filter">
+                    <option value="husker">All experiences</option>
+                    <option value="starbuck">Starbuck</option>
+                    <option value="hotdog">Hot Dog</option>
+                    <option value="apollo">Apollo</option>
+                  </select>
+                </div>
+                <a href="#" class="button primary large popup__opener">Message All Guest</a>
+                <div class="popup__holder">
+									<div class="popup__frame">
+										<div class="popup__wrap">
+											<div class="popup__box">
+												<header class="popup__head">
+													<h3 class="h4">Message All Guests</h3>
+													<a href="#" class="popup__close"><span class="icon-cross"></span></a>
+												</header>
+												<div class="popup__content">
+                          <form action="" class="dashboard__form">
+                            <div id="editor-container" class="editor editor--dashboard"></div>
+                            <button class="dashboard__form-button">Send Message</button>
+                          </form>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+              </div>
+              <ul class="table-exp">
+                <li class="table-exp__item header">
+                  <span class="table-exp__column name-avatar">Name</span>
+                  <span class="table-exp__column date">Purchased</span>
+                  <span class="table-exp__column time">Quantity</span>
+                  <span class="table-exp__column attend">Amount</span>
+                  <span class="table-exp__column ticket-o">Time Spent</span>
+                  <span class="table-exp__column engagement">Engagement</span>
+                  <span class="table-exp__column type">Updates</span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name-avatar"><img src="images/table-avatar.png" alt="Avatar" class="table__avatar"> Sandra Rogers</span>
+                  <span class="table-exp__column date">March 8, 2020</span>
+                  <span class="table-exp__column time">3</span>
+                  <span class="table-exp__column attend">$312</span>
+                  <span class="table-exp__column ticket-o">30 min.</span>
+                  <span class="table-exp__column engagement">
+                    <span class="table__icon qa">
+                      <img src="images/QA.svg" alt="">
+                    </span>
+                    <span class="table__icon meeting">
+                      <img src="images/meeting.svg" alt="">
+                    </span>                    
+                    <span class="table__icon poll">
+                      <img src="images/poll.svg" alt="">
+                    </span>
+                  </span>
+                  <span class="table-exp__column type">
+                    <span class="table__update warning">Redunf Requested</span>
+                    <button class="table__button" type="button" data-toggle="1item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="1item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item "><a class="table__nav-link " href="dashboard.html">View Profile</a>
+                          
+                        </li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Message</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Refund</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name-avatar"><img src="images/table-avatar.png" alt="Avatar" class="table__avatar"> Sandra Rogers</span>
+                  <span class="table-exp__column date">March 8, 2020</span>
+                  <span class="table-exp__column time">3</span>
+                  <span class="table-exp__column attend">$312</span>
+                  <span class="table-exp__column ticket-o">30 min.</span>
+                  <span class="table-exp__column engagement">
+                    <span class="table__icon qa">
+                      <img src="images/QA.svg" alt="">
+                    </span>
+                    <span class="table__icon meeting disable">
+                      <img src="images/meeting.svg" alt="">
+                    </span>
+                    <span class="table__icon poll">
+                      <img src="images/poll.svg" alt="">
+                    </span>
+                  </span>
+                  <span class="table-exp__column type">
+                    <span class="table__update success">Refund Given</span>
+                    <button class="table__button" type="button" data-toggle="2item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="2item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Profile</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Message</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Refund</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name-avatar"><img src="images/table-avatar.png" alt="Avatar" class="table__avatar"> Sandra Rogers</span>
+                  <span class="table-exp__column date">March 8, 2020</span>
+                  <span class="table-exp__column time">3</span>
+                  <span class="table-exp__column attend">$312</span>
+                  <span class="table-exp__column ticket-o">30 min.</span>
+                  <span class="table-exp__column engagement">
+                    <span class="table__icon qa disable">
+                      <img src="images/QA.svg" alt="">
+                    </span>
+                    <span class="table__icon meeting disable">
+                      <img src="images/meeting.svg" alt="">
+                    </span>
+                    <span class="table__icon poll">
+                      <img src="images/poll.svg" alt="">
+                    </span>
+                  </span>
+                  <span class="table-exp__column type">
+                    <span class="table__update warning">Refund requested</span>
+                    <button class="table__button" type="button" data-toggle="3item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="3item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Profile</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Message</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Refund</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+                <li class="table-exp__item">
+                  <span class="table-exp__column name-avatar"><img src="images/table-avatar.png" alt="Avatar" class="table__avatar"> Sandra Rogers</span>
+                  <span class="table-exp__column date">March 8, 2020</span>
+                  <span class="table-exp__column time">3</span>
+                  <span class="table-exp__column attend">$312</span>
+                  <span class="table-exp__column ticket-o">30 min.</span>
+                  <span class="table-exp__column engagement">
+                    <span class="table__icon">
+                      -
+                    </span>
+                    <span class="table__icon">
+                      -
+                    </span>
+                    <span class="table__icon poll">
+                      <img src="images/poll.svg" alt="">
+                    </span>
+                  </span>
+                  <span class="table-exp__column type">
+                    <span class="table__update success">Messaged</span>
+                    <button class="table__button" type="button" data-toggle="4item">&#9679;&#9679;&#9679;</button>
+                    <div class="dropdown-pane table__dropdown" data-position="bottom" data-alignment="left" id="4item" data-dropdown data-auto-focus="true">
+                      <ul class="table__nav">
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">View Profile</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Message</a></li>
+                        <li class="table__nav-item"><a class="table__nav-link" href="dashboard.html">Send Refund</a></li>
+                      </ul>
+                    </div>
+                  </span>
+                </li>
+              </ul>
+            </section>
+          </div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/js/foundation.min.js"></script>
+  <script src="js/moment.min.js"></script>
+  <script src="js/daterangepicker.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/jquery.main.js"></script>
+  <script src="js/lazysizes.min.js"></script>
+  <script>
+    const ctx1 = document.getElementById('ticketChart').getContext('2d');
+    const ctx2 = document.getElementById('incomeChart').getContext('2d');
+    const ctx3 = document.getElementById('uniqueChart').getContext('2d');
+    const ctx4 = document.getElementById('impressionChart').getContext('2d');
+
+
+    
+    const lineOptions = {
+      legend: {
+            display: false
+          },
+          scales:{
+            yAxes: [{
+              display: false,
+              gridLines:{
+                drawOnChartArea: false
+              }
+            }],
+            xAxes: [{
+              display: false
+            }]
+          }
+    }
+    const labels = ["1", "2", "3", "4", "5", "6"];
+
+
+    const ticketChart = new Chart(ctx1, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(142,183,255,.6)",
+                  borderColor: "#8EB7FF",
+                  data: [65, 59, 80, 81, 56, 100, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+    const incomeChart = new Chart(ctx2, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(135,70,234,.6)",
+                  borderColor: "#8746EA",
+                  data: [65, 59, 80, 81, 56, 80, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+    const uniqueChart = new Chart(ctx3, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(16,222,139,.6)",
+                  borderColor: "#10DE8B",
+                  data: [65, 59, 80, 81, 56, 70, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+    const impressionChart = new Chart(ctx4, {
+        type: 'line',
+        options: lineOptions,
+        data: {
+            labels: ["1", "2", "3", "4", "5", "6"],
+            datasets: [
+                {
+                  fill: true,
+                  backgroundColor: "rgba(255,102,108,.6)",
+                  borderColor: "#FF666C",
+                  data: [65, 59, 80, 81, 56, 60, 40],
+                  pointRadius: 0
+                  
+                }
+            ]}
+    });
+
+
+  </script>
+</body>
+</html>

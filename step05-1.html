@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEVATED</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="steps-page">
+	<div id="wrapper">
+		<header id="header">
+			<div class="row">
+				<div class="columns small-6 medium-3">
+					<strong class="logo">
+						<a href="#">
+							<picture>
+								<source srcset="images/logo04.webp" type="image/webp">
+								<source srcset="images/logo04.png" type="image/png"> 
+								<img class="lazyload" data-src="images/logo04.png" alt="ELEVATED">
+							</picture>
+						</a>
+					</strong>
+				</div>
+				<div class="columns small-6 medium-9">
+					<nav class="navigation">
+						<a href="#" class="navigation__opener"><span></span></a>
+						<div class="navigation__drop">
+							<a href="#" class="navigation__close"><span class="icon-cross"></span></a>
+							<ul class="navbar">
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link">Browse Experiences</a>
+								</li>
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link navbar__link--active">Create Event</a>
+								</li>
+							</ul>
+							<div class="navbar-menu">
+								<a href="" class="navigation__avatar">									
+								</a>
+								<div class="navbar-menu__container">
+									<div class="navbar-menu__header">
+										<span>John Jacob</span>
+									</div>
+									<ul class="navbar-menu__nav">
+										<li class="navbar-menu__item">
+											<a href="dashboard.html" class="navbar-menu__link">
+												<img src="images/dashboard.svg" alt="dashboard">
+												Dashboard
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="name-experience.html" class="navbar-menu__link">
+												<img src="images/profile.svg" alt="dashboard">
+												My Profile
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="experiences.html" class="navbar-menu__link">
+												<img src="images/experience.svg" alt="dashboard">
+												My Experiences
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="payment.html" class="navbar-menu__link">
+												<img src="images/settings.svg" alt="dashboard">
+												Settings
+											</a>
+										</li>
+										<li class="navbar-menu__item border-top">
+											<a href="chat.html" class="navbar-menu__link">
+												<img src="images/logout.svg" alt="dashboard">
+												Logout
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div class="row">
+				<div class="experiences-content">
+					<div class="steps">
+						<ul>
+							<li class="visited"><span class="steps__num">1</span><span class="steps__text">Category</span></li>
+							<li class="visited"><span class="steps__num">2</span><span class="steps__text">Details</span></li>
+							<li class="visited"><span class="steps__num">3</span><span class="steps__text">Agenda</span></li>
+							<li class="visited"><span class="steps__num">4</span><span class="steps__text">Media</span></li>
+							<li class="current"><span class="steps__num">5</span><span class="steps__text">Sponsors</span></li>
+							<li><span class="steps__num">6</span><span class="steps__text">Pricing</span></li>
+						</ul>
+					</div>
+					<div class="steps-content">
+						<form class="form" action="#">
+							<div class="head">
+								<h1>Images &amp; Videos</h1>
+							</div>
+							<div class="form__content">
+								<div class="form__wrap">
+									<div class="form__wrap--column">
+										<div class="form__field">
+											<label for="rel01">Company Website</label>
+											<div class="form__field--wrap input-holder">
+												<input class="form__input" id="rel01" type="text" placeholder="https://www.example.com">
+											</div>
+										</div>
+										<div class="form__field">
+											<div class="form__field--wrap input-holder">
+												<input class="form__input" type="text" placeholder="https://www.example.com">
+											</div>
+										</div>
+										<div class="form__field">
+											<a href="#" class="form__company">+ add another company</a>
+										</div>
+									</div>
+									<div class="form__wrap--column">
+										<div class="form__field">
+											<label for="rel02">Upload Logo</label>
+											<div class="form__logo">
+												<img src="images/logo-coke.png" alt="img description">
+												<a href="#" class="form__logo--delete"><span class="icon-close"></span></a>
+											</div>
+											<div class="form__field--wrap logo-upload">
+												<input id="rel02" type="file" data-jcf='{"buttonText": "Upload Logo", "placeholderText": ""}'>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="btn-holder">
+								<a href="#" class="button outline">Back</a>
+								<input class="button primary large" type="submit" value="Save &amp; Continue">
+								<a href="step06.html" class="button outline">next</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/jquery.main.js"></script>
+  <script src="js/lazysizes.min.js"></script>
+</body>
+</html>

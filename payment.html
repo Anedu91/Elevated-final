@@ -1,0 +1,189 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ELEVATED</title>
+  <link rel="stylesheet" href="css/vendors/quill.snow.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="dashboard-page">
+	<div id="wrapper">
+		<header id="header" class="header__border-bottom">
+			<div class="row">
+				<div class="columns small-6 medium-3">
+					<strong class="logo">
+						<a href="#">
+							<picture>
+								<source srcset="images/logo04.webp" type="image/webp">
+								<source srcset="images/logo04.png" type="image/png"> 
+								<img class="lazyload" data-src="images/logo04.png" alt="ELEVATED">
+							</picture>
+						</a>
+					</strong>
+				</div>
+				<div class="columns small-6 medium-9">
+					<nav class="navigation">
+            <a href="#" class="navigation__opener"><span></span></a>
+            <span class="navigation__current">Payment</span>
+						<div class="navigation__drop">
+							<a href="#" class="navigation__close"><span class="icon-cross"></span></a>
+							<ul class="navbar">
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link">Browse Experiences</a>
+								</li>
+								<li class="navbar__item">
+									<a href="step01.html" class="navbar__link navbar__link--active">Create Event</a>
+								</li>
+							</ul>
+							<div class="navbar-menu">
+								<a href="" class="navigation__avatar">									
+								</a>
+								<div class="navbar-menu__container">
+									<div class="navbar-menu__header">
+										<span>John Jacob</span>
+									</div>
+									<ul class="navbar-menu__nav">
+										<li class="navbar-menu__item">
+											<a href="dashboard.html" class="navbar-menu__link">
+												<img src="images/dashboard.svg" alt="dashboard">
+												Dashboard
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="name-experience.html" class="navbar-menu__link">
+												<img src="images/profile.svg" alt="dashboard">
+												My Profile
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="experiences.html" class="navbar-menu__link">
+												<img src="images/experience.svg" alt="dashboard">
+												My Exoeriences
+											</a>
+										</li>
+										<li class="navbar-menu__item">
+											<a href="payment.html" class="navbar-menu__link">
+												<img src="images/settings.svg" alt="dashboard">
+												Settings
+											</a>
+										</li>
+										<li class="navbar-menu__item border-top">
+											<a href="chat.html" class="navbar-menu__link">
+												<img src="images/logout.svg" alt="dashboard">
+												Logout
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<main id="main">
+			<div class="row">
+				<div class="experiences-content">
+					<div class="steps steps--dashboard">
+						<ul>
+							<li><span class="steps__icon"><img src="images/dashboard.svg" alt=""></span><span class="steps__text">Dashboard</span></li>
+							<li><span class="steps__icon"><img src="images/experience.svg" alt=""></span><span class="steps__text">Experiences</span></li>
+							<li class="current"><span class="steps__icon"><img src="images/payment.svg" alt=""></span><span class="steps__text">Payment</span></li>
+						</ul>
+          </div>
+          <div class="dashboard-content">
+            <section class="head head--experiences">
+              
+            </section>
+            <section class="payment-dashboard">
+                 <div class=" dashboard--white">
+                   <div class="payment-dashboard__header">
+                     <h3 class="dashboard__title">Payout History</h3>
+                     <a href="#" class="payment-dashboard__export">Export <span><img src="images/export.svg" alt="arrow down"></span></a>
+                   </div>
+                   <ul class="table-payment">
+										<li class="table-payment__item header">
+                      <span class="table-payment__column bank">Bank Account</span>
+                      <span class="table-payment__column date">Date Transferred</span>
+                      <span class="table-payment__column total">Amount</span>
+                    </li>
+                     <li class="table-payment__item">
+                       <span class="table-payment__column bank">Leonard G's CC 8175 </span>
+                       <span class="table-payment__column date">07 April 2018</span>
+                       <span class="table-payment__column total">$129,99</span>
+                     </li>
+										 <li class="table-payment__item">
+											<span class="table-payment__column bank">John's CC 4321 </span>
+											<span class="table-payment__column date">15 March 2018</span>
+											<span class="table-payment__column total">$55,99</span>
+										</li>
+										<li class="table-payment__item">
+											<span class="table-payment__column bank">Richmond, LLC 4312</span>
+											<span class="table-payment__column date">10 March 2018</span>
+											<span class="table-payment__column total">$73,99</span>
+										</li>
+										<li class="table-payment__item">
+											<span class="table-payment__column bank">Leonard G's CC 8175 </span>
+											<span class="table-payment__column date">07 April 2018</span>
+											<span class="table-payment__column total">$129,99</span>
+										</li>
+										<li class="table-payment__item">
+											<span class="table-payment__column bank">Leonard G's CC 8175 </span>
+											<span class="table-payment__column date">07 April 2018</span>
+											<span class="table-payment__column total">$129,99</span>
+										</li>
+										<li class="table-payment__item">
+											<span class="table-payment__column bank">Leonard G's CC 8175 </span>
+											<span class="table-payment__column date">07 April 2018</span>
+											<span class="table-payment__column total">$129,99</span>
+										</li>
+                   </ul>
+                 </div>
+                 <div class="payment-dashboard__column">
+									 <div class="dashboard--white">
+										 <p class="dashboard__balance">
+											 Account Balance <span>$45,000</span>
+										 </p>
+										 <a href="#" class="dashboard__button">Transfer Money</a>
+									 </div>
+									 <div class="dashboard--white payment-dashboard__linked">
+										<p class="dashboard__balance">
+											Linked Accounts
+										</p>
+										<ul class="table-acount">
+											<li class="table-acount__item">
+												<span class="table-acount__name">Savings…. 8175</span>
+												<a href="" class="table-acount__link">unlink</a>
+											</li>
+											<li class="table-acount__item">
+												<span class="table-acount__name">Savings…. 8175</span>
+												<a href="" class="table-acount__link">unlink</a>
+											</li>
+											<li class="table-acount__item">
+												<span class="table-acount__name">Savings…. 8175</span>
+												<a href="" class="table-acount__link">unlink</a>
+											</li>
+										</ul>
+										<a href="#" class="dashboard__button">Add Account</a>
+									</div>
+								 </div>
+            </section>
+          </div>
+				</div>
+			</div>
+		</main>
+	</div>
+	
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0/dist/js/foundation.min.js"></script>
+	<script src="js/moment.min.js"></script>
+  <script src="js/daterangepicker.js"></script>
+	<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/jquery.main.js"></script>
+  <script src="js/lazysizes.min.js"></script>
+</body>
+</html>
