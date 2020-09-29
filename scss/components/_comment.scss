@@ -1,0 +1,83 @@
+.comment {
+	display: flex;
+	margin: 0 0 10px;
+	
+	&__avatar {
+		@include font(25px, 1);
+		@include size(50px);
+		
+		min-width: 50px;
+		background: #d2f3ed;
+		border-radius: 100%;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $primary-color;
+		margin: 0 15px 0 0;
+		
+		@include breakpoint(large){
+			@include size(70px);
+			
+			font-size: 30px;
+			min-width: 70px;
+			margin: 0 20px 0 0;
+		}
+	}
+	
+	&__textbox {
+		flex-grow: 1;
+		flex-basis: 0;
+		
+		p {
+			@include font(15px, 1.438);
+			
+			opacity: 0.65;
+			margin: 0 0 15px;
+			
+			@include breakpoint(large){
+				font-size: 16px;
+			}
+		}
+	}
+	
+	&__head {
+		font-size: 14px;
+		font-weight: 400;
+		margin: 0 0 5px;
+		
+		@include breakpoint(large){
+			font-size: 15px;
+		}
+	}
+	
+	&__name {
+		font-size: 16px;
+		font-weight: 600;
+		
+		@include breakpoint(large){
+			font-size: 18px;
+		}
+	}
+	
+	&__text {
+		font-size: 13px;
+		
+		@include breakpoint(medium){
+			font-size: 15px;
+		}
+	}
+	
+	&__rate {
+		display: flex;
+		align-items: center;
+		margin: 0 0 6px;
+	}
+	
+	&__text {
+		display: block;
+		color: #949494;
+		font-style: italic;
+		margin: 0 0 0 15px;
+	}
+}

@@ -1,0 +1,142 @@
+.visual {
+	overflow: hidden;
+	margin: 0 0 10px;
+	background: linear-gradient(90deg, rgba(32, 1, 63, 0.897673) 7.84%, rgba(16, 0, 32, 0.631343) 53.38%, rgba(0, 0, 0, 0.236478) 86.63%, rgba(0, 0, 0, 0.236478) 86.63%, rgba(0, 0, 0, 0.236478) 86.63%);
+	
+	@include breakpoint(medium){
+		margin: 0;
+	}
+	
+	.row {
+		min-height: 300px;
+		padding-top: 65px;
+		position: relative;
+		
+		@include breakpoint(medium){
+			min-height: 400px;
+			padding-top: 75px;
+		}
+		
+		@include breakpoint(large){
+			min-height: 440px;
+		}
+	}
+	
+	h1 {
+		line-height: 1;
+		color: $white;
+		letter-spacing: -1.5px;
+		
+		@include breakpoint(medium){
+			line-height: 0.935;
+		}
+		
+		@include breakpoint(large){
+			padding-left: 57px;
+		}
+	}
+	
+	&__rating {
+		position: absolute;
+		right: 15px;
+		top: 20px;
+		background: $black;
+		border-radius: 5px;
+		color: $white;
+		font-size: 14px;
+		line-height: 1;
+		font-weight: 500;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		
+		@include breakpoint(medium){
+			top: 25px;
+			font-size: 16px;
+			padding: 15px 12px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 19px;
+		}
+		
+		@include breakpoint(xlarge){
+			font-size: 23px;
+		}
+		
+		.icon-star {
+			font-size: 12px;
+			font-weight: normal;
+			margin: 0 8px;
+			position: relative;
+			
+			@include breakpoint(medium){
+				font-size: 14px;
+			}
+			
+			@include breakpoint(large){
+				font-size: 17px;
+			}
+			
+			@include breakpoint(xlarge){
+				font-size: 20px;
+				top: -3px;
+			}
+		}
+	}
+	
+	&__play {
+		@include size(53px);
+		@include font(25px, 1);
+		
+		background: $purple;
+		color: $white;
+		border-radius: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, 30%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 5px;
+		
+		@include breakpoint(medium){
+			transform: translate(-50%, -20%);
+		}
+		
+		@include breakpoint(large){
+			@include size(73px);
+			
+			font-size: 35px;
+		}
+		
+		&:hover {
+			color: $primary-color;
+		}
+	}
+	
+	&__img {
+		overflow: hidden;
+		position: relative;
+		height: 250px;
+		
+		@include breakpoint(medium){
+			height: 330px;
+		}
+		
+		&:before {
+			@include position(0);
+			
+			content: '';
+			background: rgba(0,0,0,0.66);
+		}
+		
+		img {
+			@include size(100%);
+			
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+}

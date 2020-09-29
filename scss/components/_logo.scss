@@ -1,0 +1,16 @@
+.logo-new{
+  a{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #26183C;
+    font-weight: 600;
+    @include font(28.8px,43px);
+    img{
+      margin-right: 8px;
+    }
+    &.white{
+      color: #fff;
+    }
+  }
+}

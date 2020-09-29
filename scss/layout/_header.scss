@@ -1,0 +1,40 @@
+#header {
+	position: relative;
+	background: $white;
+	padding: 15px 0;
+	
+	@include breakpoint(large){
+		padding: 30px 0;
+	}
+	
+	.row {
+		align-items: center;
+	}
+}
+.header{
+	&__border-bottom{
+		border-bottom: 1px solid #F1F1F1;
+	}
+}
+
+.logo {
+	width: 120px;
+	display: block;
+	
+	@include breakpoint(medium){
+		width: 140px;
+	}
+	
+	@include breakpoint(large){
+		width: 168px;
+		margin: 0 0 0 12px;
+	}
+	
+	a {
+		display: block;
+		
+		img {
+			@include img;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.sidebar {
+	padding-top: 60px;
+	
+	@include breakpoint(medium){
+		padding-top: 0;
+		padding-left: 10px;
+	}
+	
+	@include breakpoint(large){
+		padding-left: 20px;
+	}
+	
+	@include breakpoint(xxlarge){
+		padding-left: 40px;
+	}
+	
+	h3 {
+		font-weight: 600;
+		color: $light-gray03;
+		margin: 0 0 16px;
+		text-transform: uppercase;
+	}
+}

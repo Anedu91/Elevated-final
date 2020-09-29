@@ -1,0 +1,39 @@
+.status{
+  padding: 24px 20px;
+  &--gray{
+    background: #f8f8f8;
+    border-radius: 12px;
+  }
+  &__item{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+  }
+  &__title{
+    font-weight: 600;
+    @include font(11px);
+    margin-bottom: 0;
+  }
+  &__number{
+    margin-top: 8px;
+    display: block;
+    @include font(19px,29px);
+     color: #56a8b3;
+  }
+  &__audience-rating{
+    position: absolute;
+    top: -1rem;
+    right: 0;
+    font-weight: normal;
+    @include font(11px,16px);
+    &.danger{
+      color: #ec5a6b;
+    }
+  }
+
+
+}

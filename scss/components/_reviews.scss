@@ -1,0 +1,191 @@
+.reviews {
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+		align-items: flex-start;
+		margin: 0 0 20px;
+		
+		@include breakpoint(large){
+			margin: 0 0 15px;
+		}
+		
+		h3 {
+			margin: 0 15px 0 0 !important;
+		}
+	}
+	
+	&__heading {
+		display: flex;
+		align-items: center;
+		margin: 0 0 15px;
+		
+		@include breakpoint(large){
+			margin: 0;
+		}
+	}
+	
+	&__ratings {
+		@include font(0,0);
+		@include listreset;
+		
+		display: flex;
+		
+		li {
+			margin: 0 1px 0 0;
+		}
+		
+		img {
+			width: 15px;
+		}
+	}
+	
+	&__select {
+		position: relative;
+		display: block;
+		min-width: 285px;
+		width: 100%;
+		
+		@include breakpoint(large){
+			width: auto;
+		}
+		
+		&:before,
+		&:after {
+			position: absolute;
+			pointer-events: none;
+			display: none;
+		}
+		
+		&:before {
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 50px;
+			content: '';
+			border-radius: 0 10px 10px 0;
+			background: linear-gradient(167.98deg, #1BDBB6 10.28%, #15DA97 86.99%, #0ED973 107.44%, #00D727 127.51%);
+			
+			@include breakpoint(medium){
+				width: 62px;
+			}
+		}
+		
+		&:after {
+			@include font(30px, 1);
+			
+			right: 10px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: $white;
+			font-family: 'icomoon';
+			content: '\e905';
+			
+			@include breakpoint(medium){
+				right: 15px;
+			}
+		}
+		
+		select {
+			background: #f7f8fa;
+			border-color: #dfdfdf;
+			border-radius: 10px;
+			font-size: 16px;
+			line-height: 28px;
+			font-weight: 500;
+			letter-spacing: 0.58px;
+			color: #bbb;
+			height: 42px;
+			margin: 0;
+			
+			@include breakpoint(medium){
+				font-size: 18px;
+				height: 50px;
+			}
+			
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+	
+	&__form {
+		margin: 0 0 30px;
+		overflow: hidden;
+		background: #f7f8fa;
+		border-radius: 6px;
+		border: 1px solid #dee1e4;
+		
+		&--head {
+			padding: 15px;
+			display: flex;
+			justify-content: space-between;
+			background: $white;
+			border-bottom: 1px solid #dde1e6;
+			
+			@include breakpoint(medium){
+				padding: 15px 25px;
+			}
+		}
+		
+		&--title {
+			display: block;
+			font-size: 18px;
+			color: #5f5e65;
+			font-weight: 500;
+		}
+		
+		&--ratings {
+			@include listreset;
+			
+			display: flex;
+			
+			li {
+				margin: 0 1px;
+				
+				img {
+					width: 22px;
+					
+					@include breakpoint(medium){
+						width: 28px;
+					}
+				}
+			}
+		}
+		
+		textarea {
+			height: 175px;
+			resize: none;
+			border: 0;
+			padding: 15px;
+			box-shadow: none;
+			background: transparent;
+			
+			@include breakpoint(medium){
+				padding: 25px;
+			}
+			
+			@include breakpoint(large){
+				padding: 25px 35px;
+			}
+			
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
+	
+	&__button {
+		padding: 15px;
+		text-align: right;
+		
+		.button {
+			border-radius: 6px;
+			margin: 0;
+		}
+	}
+	
+	&__comments {
+		overflow: hidden;
+	}
+}

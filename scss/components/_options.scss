@@ -1,0 +1,92 @@
+.options {
+	@include listreset;
+	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 0 -9px 20px;
+	
+	@include breakpoint(large){
+		margin: 0 -9px;
+	}
+	
+	li {
+		width: 50%;
+		padding: 0 9px;
+		margin: 0 0 20px;
+		
+		@include breakpoint(xlarge){
+			width: 25%;
+			max-width: 233px;
+		}
+		
+		label {
+			display: block;
+			background: $white;
+			border-radius: 10px;
+			border: 1px solid #dee1e4;
+			position: relative;
+			padding: 45px 15px 20px;
+			text-align: center;
+			margin: 0;
+			
+			@include breakpoint(xxlarge){
+				padding: 45px 20px 20px;
+			}
+		}
+		
+		.custom-input {
+			top: 10px;
+			right: 10px;
+			position: absolute;
+			
+			@include breakpoint(xlarge){
+				top: 10px;
+				right: 18px;
+			}
+		}
+		
+		[class^="icon-"], 
+		[class*=" icon-"] {
+			@include font(60px, 1);
+			
+			color: #17daa0;
+			display: block;
+			margin: 0 0 20px;
+		}
+		
+		.icon {
+			display: block;
+			margin: 0 0 20px;
+			height: 67px;
+		}
+		
+		.custom-label {
+			@include font(14px, 1.5);
+			
+			color: $black;
+			display: block;
+			font-weight: 600;
+			letter-spacing: 0.0914286px;
+			cursor: pointer;
+			
+			@include breakpoint(large){
+				font-size: 15px;
+			}
+			
+			@include breakpoint(xxlarge){
+				font-size: 16px;
+			}
+			
+			&:before {
+				@include position(-1px);
+				
+				content: '';
+				border-radius: 10px;
+				border: 1px solid #1cdab4;
+				box-shadow: 0 12px 24px rgba(116, 128, 157, 0.181726);
+				opacity: 0;
+			}
+		}
+	}
+}

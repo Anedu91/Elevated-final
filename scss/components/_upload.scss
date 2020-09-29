@@ -1,0 +1,87 @@
+.upload {
+	max-width: 1020px;
+	overflow: hidden;
+	padding: 35px 15px;
+	text-align: center;
+	background: $white;
+	border-radius: 10px;
+	margin: 0 0 30px;
+	box-shadow: 0 12px 24px rgba(116, 128, 157, 0.181726);
+	
+	@include breakpoint(medium){
+		padding: 75px 20px 60px;
+	}
+	
+	h2 {
+		font-size: 22px;
+		line-height: 1.368;
+		color: #6c6c6c;
+		margin: 0 0 20px;
+		
+		@include breakpoint(medium){
+			font-size: 30px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 38px;
+		}
+	}
+	
+	p {
+		font-size: 13px;
+		line-height: 18px;
+		color: #74809d;
+		opacity: 0.4;
+		margin: 0 0 30px;
+		font-weight: 700;
+	}
+	
+	.icon {
+		width: 86px;
+		display: block;
+		margin: 0 auto 20px;
+		
+		@include breakpoint(medium){
+			width: 106px;
+		}
+	}
+	
+	.jcf-file {
+		background: $white;
+		border: 2px dashed #bbc6d7;
+		border-radius: 14px;
+		height: 120px;
+		max-width: 625px;
+		margin: 0 auto;
+
+		@include breakpoint(medium){
+			height: 130px;
+		}
+
+		@include breakpoint(large){
+			height: 130px;
+		}
+		
+		.jcf-fake-input {
+			font-size: 14px;
+			color: #777;
+			font-weight: 600;
+			
+			@include breakpoint(medium){
+				font-size: 16px;
+			}
+
+			@include breakpoint(large){
+				font-size: 16px;
+			}
+
+			@include breakpoint(xlarge){
+				font-size: 16px;
+			}
+			
+			&:before {
+				display: none;
+			}
+		}
+	}
+}

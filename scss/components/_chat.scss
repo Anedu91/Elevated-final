@@ -1,0 +1,341 @@
+.chat {
+	padding: 15px;
+	padding-right: 10px;
+	margin: 0 5px 0 0;
+	position: relative;
+	
+	@include breakpoint(medium){
+		padding: 35px;
+		padding-right: 25px;
+		margin: 0 10px 0 0;
+	}
+	
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+		margin: 10px 0 10px 40px;
+		flex-wrap: wrap;
+		
+		@include breakpoint(medium){
+			margin: 10px 0 10px 0;
+		}
+		@include breakpoint(large){
+			margin: 10px 0 10px 0;
+		}
+		
+		&.gray {
+			flex-direction: row;
+			flex-wrap: nowrap;
+			// margin: 0 0 20px;
+		
+			// @include breakpoint(medium){
+			// 	margin: 0;
+			// }
+			
+			.chat__avatar {
+				margin: 0 15px 0 0;
+				
+				@include breakpoint(medium){
+					margin: 0 20px 0 0;
+				}
+			}
+			
+			.chat__text {
+				color: #414141;
+				background: #f3f3f5;
+				border-radius: 0 15px 15px 15px;
+			}
+			
+			.chat__status {
+				right: auto;
+				left: 0;
+			}
+		}
+	}
+	
+	&__avatar {
+		@include font(19px, 1);
+		@include size(44px);
+		flex:  0 0 44px;
+		border-radius: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #d2f3ed;
+		color: $primary-color;
+		margin: 0 0 0 15px;
+		img{
+			border-radius: 100%;
+		}
+		@include breakpoint(medium){
+			margin: 0 0 0 20px;
+		}
+	}
+	
+	&__text {
+		color: $white;
+		background: #1bdbb6;
+		font-size: 15px;
+		line-height: 130%;
+		font-weight: 500;
+		text-align: left;
+		padding: 15px;
+		border-radius: 15px 0 15px 15px;
+		max-width: 100%;
+		
+		@include breakpoint(medium){
+			max-width: 290px;
+			min-width: 190px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 17px;
+			padding: 22px 35px;
+			max-width: 320px;
+		}
+	}
+	
+	&__status {
+		flex: 0 0 100%;
+		text-align: right;
+		font-size: 14px;
+		font-weight: 500;
+		color: #a7a7a7;
+		letter-spacing: 0.533333px;
+		margin-top: 15px;
+	}
+	/*chat sidebar*/
+	&__sidebar{
+		width: 100vw;
+		min-width: 100vw;
+		border-right: 1px solid #DCDCDC;
+		height: calc(100vh - 103px);
+		transform: translateX(-100vw);
+		position: absolute;
+		background: #fff;
+		z-index: 10;
+		transition: all .5s;
+		@include breakpoint(medium){
+			position: relative;
+		width: 300px;
+		min-width: 300px;
+		transform: translateX(0);
+		}
+		@include breakpoint(large){
+			width: 370px;
+			min-width: 370px;
+		}
+		&.open{
+			transform: translateX(0px);
+		}
+	}
+	&__menu{
+		padding: 11px 15px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		input{
+			margin-top: 13px;
+			flex: 0 0 100%;
+		}
+	}
+	&__list{
+		list-style: none;
+		margin-left: 0;
+		overflow-y: scroll;
+		height: 100%;
+		-ms-overflow-style: none;  /* IE and Edge */
+  	scrollbar-width: none;  /* Firefox */
+		&::-webkit-scrollbar{
+			display: none;
+		}
+	}
+
+	
+	&__link{
+		color: inherit;
+		display: flex;
+		align-items: center;
+		padding:24px 15px;
+		&:hover{
+			background: #F2F9F8;
+			color: inherit;
+		}
+	}
+	&__figure{
+		margin-right: 20px;
+		position: relative;
+		width: 100%;
+		height: 60px;
+		max-width: 60px;
+		img{
+			display: block;
+			object-fit: cover;
+			border-radius: 100%;
+		}
+		.badge{
+			position: absolute;
+			@include font(12px,18px);
+			background: #FF2D55;
+			border: 1px solid #FFFFFF;
+			right: 0;
+			bottom: -5px;
+		}
+	}
+	&__info{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+	}
+	&__name{
+		font-weight: normal;
+		@include font(18px,22px);
+		letter-spacing: 0.338824px;
+	}
+	&__time{
+		text-transform: uppercase;
+		@include font(13px,20px);
+		letter-spacing: 0.32px;
+		color: #ACB1C0;
+	}
+	&__mini-message{
+		flex: 0 0 100%;
+		margin-bottom: 0;
+		@include font(15px,22px);
+		color: #a4a4a4;
+		letter-spacing: 0.282353px;
+
+	}
+
+	/*chat container*/
+	&__content{
+		flex-grow: 1;
+		flex-basis: 0;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 73px);
+		@include breakpoint(large){
+			height: calc(100vh - 103px);
+		}
+
+		.chat{
+			flex: 1;
+			max-height: calc(100vh - 73px - 120px);
+			overflow-y: scroll;
+			-ms-overflow-style: none;  /* IE and Edge */
+			scrollbar-width: none;  /* Firefox */
+			&::-webkit-scrollbar{
+				display: none;
+			}
+			@include breakpoint(large){
+				max-height: calc(100vh - 100px - 120px);
+			}
+		}
+	}
+	&__header{
+		padding: 20px 42px;
+		display: flex;
+		background: #F7F8FA;
+		box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.1);
+		align-items: center;
+		.chat__name{
+			margin-bottom: 0;
+		}
+	}
+	&__footer{
+		padding: 20px 12px;
+		background: #f7f8fa;
+		@include breakpoint(medium){
+			padding: 20px 42px;
+			
+		}
+	}
+	&__form{
+		width: 100%;
+			display: flex;
+			align-items: center;
+			position: relative;
+		textarea {
+			width: 100%;
+			border: 1px solid $white;
+			background: $white;
+			box-shadow: none;
+			border-radius: 17px;
+			padding: 18px 20px;
+			font-size: 15px;
+			line-height: 130%;
+			font-weight: 500;
+			resize: none;
+			overflow: hidden;
+			min-height: 80px;
+			margin: 0;
+			
+			@include breakpoint(medium){
+				padding: 18px 35px;
+			}
+			
+			&:focus {
+				box-shadow: none;
+			}
+		}
+		
+		.btn__send {
+			@include size(25px);
+
+			margin: 0 0 0 20px;
+			@include breakpoint(medium){
+				@include size(32px)
+			}
+			
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+	&__file{
+		position: absolute;
+		right: 50px;
+		cursor: pointer;
+		@include breakpoint(medium){
+			right: 70px;
+		}
+		.jcf-file{
+			display: none;
+		}
+		img{
+			width: 20px;
+			filter: opacity(.5);
+		}
+		@include breakpoint(medium){
+			img{
+				width: 25px;
+			}
+		}
+	}
+	&__sidebar-button{
+		position: fixed;
+
+		svg{
+			fill: #1bdbb6;
+			@include size(30px)
+		}
+		@include breakpoint(medium){
+			display: none;
+		}
+	}
+	&__sidebar-close{
+		padding: 11px 15px;
+		a{
+			color: #000;
+		}
+		@include breakpoint(medium){
+			display: none;
+		}
+	}
+}

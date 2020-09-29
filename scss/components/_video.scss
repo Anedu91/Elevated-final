@@ -1,0 +1,47 @@
+.video {
+	&__slider {
+		.slick-list {
+			border-radius: 10px;
+		}	
+	}
+	
+	&__holder {
+		background: $light-gray01;
+		border-radius: 10px;
+		overflow: hidden;
+		position: relative;
+		
+		img {
+			@include img;
+			
+			border-radius: 10px;
+		}
+	}
+		
+	&__play {
+		@include size(53px);
+		@include font(25px, 1);
+
+		background: $purple;
+		color: $white;
+		border-radius: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-left: 5px;
+		
+		@include breakpoint(large){
+			@include size(73px);
+			
+			font-size: 35px;
+		}
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}

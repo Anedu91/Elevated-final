@@ -1,0 +1,55 @@
+.completed {
+	overflow: hidden;
+	text-align: center;
+	
+	&__img {
+		overflow: hidden;
+		text-align: center;
+		margin: 0 0 35px;
+		
+		@include breakpoint(medium){
+			margin: 0 0 65px;
+		}
+	}
+	
+	&__title {
+		font-size: 25px;
+		line-height: 1.2;
+		display: block;
+		color: #17e0a9;
+		letter-spacing: 0.7px;
+		margin: 0 0 12px;
+		
+		@include breakpoint(medium){
+			font-size: 30px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 35px;
+		}
+	}
+	
+	p {
+		@include font(16px, 1.478);
+		
+		color: $black;
+		margin: 0 0 25px;
+		font-weight: 500;
+		
+		@include breakpoint(medium){
+			font-size: 20px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 23px;
+		}
+	}
+	
+	.button {
+		&.primary {
+			font-weight: 600;
+			padding: 10px 14px;
+			letter-spacing: 0.6px;
+		}
+	}
+}

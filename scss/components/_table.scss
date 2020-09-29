@@ -1,0 +1,328 @@
+.table{
+  list-style: none;
+  margin-left: 0;
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 14px;
+    border-radius: 12px;
+    &:nth-child(even){
+      background: #F8F8FB;
+    }
+
+  }
+  &__name-item{
+    @include font(11px);
+    font-weight: 500;
+    flex: 0 0 50%;
+  }
+  &__description{
+    display: block;
+    color: #b1b1b1;
+    @include font(10px);
+    font-weight: normal;
+  }
+  &__status{
+    flex: 0 0 25%;
+    overflow: hidden;
+    @include font(9px);
+    font-weight: 700;
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px 11px;
+    &--danger{
+      background: #FFEDEF;
+      color: #EC5A6B;
+    }
+    &--update{
+      background: #E1E1EF;
+      color:#46457B;
+    }
+    &--purchased{
+      background: #E2F4EC;
+      color: #54A782;
+    }
+  }
+  &__date{
+    @include font(10px);
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__button{
+    opacity: .45;
+  }
+  &__badge{
+    @include font(11px,13px);
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 11px;
+    text-transform: uppercase;
+    &.consultation{
+      background: #EFE6FB;
+      color: #672CBA;
+    }
+    &.group{
+      background: #FFEBCB;
+      color: #E98713;
+    }
+    &.conference{
+      background: #BCFFE6;
+      color: #2DA87D;
+    }
+    &.webinar{
+      background: rgba(255, 102, 108, 0.137456);
+      color: #FF7277;
+    }
+  }
+  &__update{
+    font-weight: 500;
+    @include font(12px,18px);
+    text-transform: capitalize;
+    &.warning{
+      color: #ee6576;
+    }
+    &.success{
+      color: #56A8B3;
+    }
+  }
+  &__avatar{
+    @include box(40px);
+    margin-right: 11px;
+  }
+  &__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include box(30px);
+    padding: 3px;
+    position: relative;
+    border: 1px solid transparent;
+    background: #fff;
+    img{
+      max-width: 23px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0; right: 0;left: 0;bottom: 0;
+      border-radius: inherit;
+      margin: -3px; 
+      border-radius: inherit;    
+      z-index: -1;
+    }    
+    &.qa{
+      &::before{
+        background: linear-gradient(to right, #006DF0, #00E7F0);
+      }
+    }
+    &.meeting{
+      &::before{
+        background: linear-gradient(to right, #A163F5, #EFBAD3);
+      }
+    }
+    &.poll{
+      &::before{
+        background: linear-gradient(to right, #FBCCD2, #EF6D7D);
+      }
+    }
+    &.disable{
+      img{
+        filter: grayscale(100%);
+      }
+          &::before{
+            background: #c8bdbd;
+          }
+    }
+  }
+
+  &__dropdown{
+    padding: 15px 0;
+    max-width: 200px;
+    background: #FFF;
+    border: 1px solid #F1F1F1;
+    box-shadow: 2px 24px 67px 10px rgba(242, 243, 252, 0.600197);
+    border-radius: 10px;
+
+  }
+  &__nav{
+    list-style: none;
+    margin-left: 0;    
+  }
+  &__nav-item{
+    &:not(:last-child){
+      margin-bottom: 10px;
+    }
+  }
+  &__nav-link{
+    padding: 4px 15px;
+    display: flex;
+    color: #000;
+    &:hover{
+      background: #F2F9F8;
+      color: #000;
+    }
+  }
+}
+
+.table-exp{
+  margin-left: 0;
+  list-style: none;  
+  &__item{
+    padding: 17px 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &:not(:last-child){
+      margin-bottom: 20px;
+      border-bottom: 1px solid #F8F9FB;
+    }
+    &.header{
+      background: #F8F9FB;
+      color: #848484;
+      .type{
+        text-align: center;
+        justify-content: center;
+        @include breakpoint(medium){
+          justify-content: flex-start;
+        }
+      }
+      .name-avatar{
+        justify-content: center;
+        @include breakpoint(medium){
+          justify-content:flex-start;
+        }
+      }
+    }
+  }
+  &__column{
+    flex: 0 0 100%;
+    text-align: center;
+    @include font(12px,18px);
+    &:not(:last-child){
+      margin-bottom: 5px;
+    }
+    &.name{
+      text-transform: capitalize;
+    }
+    &.type{         
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    &.name-avatar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &.engagement{
+      display: flex;
+      justify-content: space-around;
+    }
+    @include breakpoint(medium){
+      flex: 0 0 10%;
+      &:not(:last-child){
+        margin-bottom: 0;
+      }
+      &.name{
+        flex: 0 0 25%;
+        text-align: left;
+      }
+      &.date{
+        text-align: left;
+      }
+      &.type{
+        flex: 0 0 100%;
+        text-align: left;
+        margin-top: 15px;
+      }
+      &.name-avatar{
+        flex: 0 0 23%;
+        text-align: left;
+        justify-content: flex-start;
+      }
+      &.engagement{
+        flex: 0 0 23%;
+      }
+    }
+    @include breakpoint(large){
+      flex: 0 0 10%;
+      &.name{
+        flex: 0 0 20%;
+      }
+      &.type{
+        flex: 0 0 20%;
+        margin-top: 0;
+      }
+
+      &.name-avatar{
+        flex: 0 0 18%;
+      }
+      &.engagement{
+        flex: 0 0 12%;
+      }
+    }
+    &:nth-child(even){
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.45;
+    }
+  }
+  
+}
+
+.table-payment{
+  list-style: none;
+  margin-left: 0;
+  
+  &__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 5px;
+    &:not(:last-child){
+      border-bottom: 1px solid #EFF3F9;
+    }
+    &.header{
+      background: #F8F9FB;
+      color: #848484;
+      padding: 11px 5px;
+    }
+  }
+  &__column{
+    flex: 0 0 25%;
+    @include font(12px,18px);
+    font-weight: 500;
+    &.total{
+      flex: 0 0 20%;
+    }
+    &.bank{
+      flex: 0 0 35%;
+    }
+    &:nth-child(even){
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.45;
+    }
+  }
+}
+
+.table-acount{
+  list-style: none;
+  margin-left: 0;
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    &:not(:last-child){
+      border-bottom: 1px solid #EFF3F9;
+    }
+  }
+  &__name{
+    @include font(15px,22px);
+    opacity: .69;
+  }
+}
+

@@ -1,0 +1,29 @@
+.microphone {
+	display: flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: 0 0 20px;
+	
+	@include breakpoint(medium){
+		margin: 0;
+	}
+	
+	&__icon {
+		overflow: hidden;
+		margin: 0 0 30px;
+	}
+	
+	&__text {
+		@include font(20px, 1.280);
+		
+		color: #b1b1b1;
+		display: block;
+		letter-spacing: 0.142857px;
+		
+		@include breakpoint(medium){
+			font-size: 25px;
+		}
+	}
+}

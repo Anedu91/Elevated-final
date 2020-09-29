@@ -1,0 +1,65 @@
+.social {
+	overflow: hidden;
+	margin: 0 0 65px;
+	
+	&__title {
+		display: block;
+		color: $dark-gary01;
+		font-weight: 500;
+		opacity: 0.75;
+		font-size: 16px;
+		letter-spacing: 0.8px;
+		margin: 0 0 10px;
+	}
+	
+	&__networks {
+		@include listreset;
+		@include font(16px, 1);
+		
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 -5px;
+		
+		@include breakpoint(large){
+			font-size: 19px;
+		}
+		
+		@include breakpoint(xlarge){
+			font-size: 23px;
+		}
+		
+		li {
+			padding: 0 5px;
+			margin: 0 0 10px;
+			
+			a {
+				@include  size(34px);
+				
+				display: block;
+				background: #c8c7c8;
+				border-radius: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+				
+				@include breakpoint(large){
+					@include  size(42px);
+				}
+				
+				@include breakpoint(xlarge){
+					@include size(48px);
+				}
+				
+				&:hover {
+					background: #000000;
+					box-shadow: 0px 4px 4px rgba(154, 154, 154, 0.25);
+				}
+				
+				&:focus {
+					background: #4b4949;
+				}
+			}
+		}
+	}
+}

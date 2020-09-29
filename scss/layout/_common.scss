@@ -1,0 +1,510 @@
+#main {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.column-content {
+	@include breakpoint(medium){
+		margin-right: -15px;
+	}
+	
+	h3 {
+		line-height: 1.478;
+		color: $purple01;
+		margin: 0 0 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: -0.176923px;
+		
+		@include breakpoint(medium){
+			margin: 0 0 28px;
+		}
+	}
+}
+
+.block {
+	margin: 0 0 40px;
+	
+	@include breakpoint(medium){
+		margin: 0 0 77px;
+	}
+}
+
+.profile-page {
+	.column-content {
+		@include breakpoint(medium){
+			margin-right: 0;
+			margin-left: -15px;
+		}
+
+		h3 {
+			color: #020202;
+		}
+	}
+	
+	.sidebar {
+		padding: 0;
+
+		@include breakpoint(medium){
+			padding: 0 10px 0 0;
+		}
+
+		@include breakpoint(large){
+			padding: 0 20px 0 0;
+		}
+
+		@include breakpoint(xxlarge){
+			padding: 0 40px 0 0;
+		}
+
+		h3 {
+			color: $dark-gary01;
+		}
+	}
+	
+	.social {
+		margin: 0 0 15px;
+		
+		@include breakpoint(medium){
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			margin: 0 0 50px;
+		}
+		
+		&__title {
+			color: #a7a7a7;
+			margin: 0 0 10px;
+			
+			@include breakpoint(medium){
+				margin: 0 20px 10px 0;
+			}
+		}
+	}
+	
+	.slick-arrow {
+		border-color: #19dbac;
+		background: linear-gradient(165.49deg, #1BDBB6 10.28%, #15DA97 86.99%, #0ED973 107.44%, #00D727 127.51%);
+		
+		&.slick-disabled {
+			color: #19dbac;
+			border-color: #19dbac;
+		}
+	}
+	
+	.order-1 {
+		@include breakpoint(medium){
+			order: 1;
+		}
+	}
+	
+	.order-2 {
+		@include breakpoint(medium){
+			order: 2;
+		}
+	}
+}
+
+.steps-page {
+	.row {
+		max-width: 100% !important;
+	}
+	
+	.logo {
+		position: relative;
+		width: 120px;
+
+		@include breakpoint(medium){
+			width: 140px;
+		}
+
+		@include breakpoint(large){
+			width: 168px;
+		}
+		
+		@include breakpoint(xlarge){
+			width: 211px;
+		}
+		
+		&:before {
+			width: 165px;
+			background: $black;
+			position: absolute;
+			left: -27px;
+			top: -50px;
+			bottom: -50px;
+			content: '';
+			
+			@include breakpoint(medium){
+				width: 192px;
+				left: -15px;
+			}
+			
+			@include breakpoint(large){
+				left: -27px;
+				width: 250px;
+			}
+			
+			@include breakpoint(xlarge){
+				width: 300px;
+			}
+		}
+		
+		a {
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
+
+.experiences-content {
+	width: 100%;
+	padding: 0 0 40px;
+	
+	@include breakpoint(medium){
+		display: flex;
+		min-height: calc(100vh - 71px);
+		padding: 0;
+	}
+	
+	@include breakpoint(large){
+		min-height: calc(100vh - 102px);
+	}
+}
+
+.steps-content {
+	flex-grow: 1;
+	flex-basis: 0;
+	position: relative;
+	padding: 0 10px;
+	overflow: hidden;
+	
+	@include breakpoint(medium){
+		padding: 50px 20px;
+	}
+	
+	@include breakpoint(large){
+		padding: 50px 20px 120px;
+	}
+	
+	@include breakpoint(xlarge){
+		padding: 80px 35px 160px;
+	}
+	
+	@include breakpoint(xxlarge){
+		padding: 80px 50px 160px;
+	}
+	
+	.head {
+		text-align: center;
+		margin: 0 0 20px;
+		
+		@include breakpoint(medium){
+			margin: 0 0 50px;
+		}
+		
+		@include breakpoint(xlarge){
+			margin: 0 0 70px;
+		}
+
+		&--flex{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.popup__head {
+			h3.h4 {
+				font-size: 17px;
+				line-height: 25px;
+				font-weight: 600;
+				text-transform: none;
+			}
+		}
+		
+		.popup__box {
+			max-width: 900px;
+		}
+		
+		p {
+			&.large {
+				font-size: 19px;
+				line-height: 1.368;
+				color: #9e9e9e;
+				max-width: 465px;
+				margin: 0 auto 30px;
+				padding: 5px 0 0;
+			}
+		}
+		
+		&__upload {
+			text-align: right;
+			
+			@include breakpoint(medium){
+				margin: 0 0 -15px;
+			}
+			
+			@include breakpoint(xlarge){
+				margin: 0 0 -30px;
+			}
+			
+			.jcf-file {
+				width: auto;
+				display: inline-flex;
+				min-width: 176px;
+				margin-left: auto;
+				background: #56a8b3;
+				border-radius: 36px;
+				border: 0;
+				padding: 8px 15px;
+				height: auto;
+
+				@include breakpoint(medium){
+					height: auto;
+					padding: 8px 15px;
+				}
+
+				@include breakpoint(large){
+					height: auto;
+				}
+
+				.jcf-fake-input {
+					@include font(16px, 1.5);
+					
+					font-weight: 600;
+					display: block;
+					overflow: hidden;
+					width: 100%;
+					text-align: center;
+					color: $white;
+					max-width: 380px;
+					margin: 0 auto;
+
+					@include breakpoint(medium){
+						font-size: 16px;
+					}
+
+					@include breakpoint(large){
+						font-size: 16px;
+					}
+
+					@include breakpoint(xlarge){
+						font-size: 16px;
+					}
+
+					&:before {
+						display: none;
+					}
+				}
+
+				.jcf-upload-button {
+					display: none;
+				}
+				
+				&:hover {
+					background: #41949f;
+				}
+			}
+		}
+	}
+	
+	h1 {
+		@include font(28px, 1.25);
+		
+		letter-spacing: 0.9px;
+		
+		@include breakpoint(medium){
+			font-size: 35px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 40px;
+		}
+		
+		@include breakpoint(xlarge){
+			font-size: 45px;
+		}
+	}
+	
+	.title {
+		@include font(15px, 1.476);
+		
+		letter-spacing: 0.52px;
+		display: block;
+		margin: 0 0 10px;
+		color: $black;
+		opacity: 0.85;
+		
+		@include breakpoint(medium){
+			font-size: 17px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 19px;
+		}
+		
+		@include breakpoint(xlarge){
+			font-size: 21px;
+		}
+	}
+	
+	.link {
+		@include font(14px, 1.5);
+		
+		color: #06ccad;
+		
+		@include breakpoint(medium){
+			font-size: 15px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 16px;
+		}
+		
+		&:hover {
+			color: #11d981;
+		}
+	}
+	
+	.btn-holder {
+		overflow: hidden;
+		text-align: center;
+		
+		@include breakpoint(large){
+			position: absolute;
+			left: 0;
+			width: 100%;
+			bottom: 40px;
+		}
+
+		@include breakpoint(xlarge){
+			bottom: 62px;
+		}
+		
+		.button {
+			font-size: 16px;
+			font-weight: 600;
+			margin: 0;
+			border-radius: 6px;
+			
+			&:focus {
+				font-weight: 400;
+			}
+			
+			&.outline {
+				min-width: 90px;
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+
+.dashboard-page{
+	.row {
+		max-width: 100% !important;
+	}
+	
+	.logo {
+		position: relative;
+		width: 120px;
+
+		@include breakpoint(medium){
+			width: 140px;
+		}
+
+		@include breakpoint(large){
+			width: 168px;
+		}
+		
+		@include breakpoint(xlarge){
+			width: 158px;
+		}
+		
+		&:before {
+			width: 165px;
+			background: $black;
+			position: absolute;
+			left: -27px;
+			top: -50px;
+			bottom: -50px;
+			content: '';
+			
+			@include breakpoint(medium){
+				width: 192px;
+				left: -15px;
+			}
+			
+			@include breakpoint(large){
+				left: -27px;
+				width: 250px;
+			}
+			
+			@include breakpoint(xlarge){
+				width: 225px;
+			}
+		}
+		
+		a {
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
+.dashboard-content{
+	flex-grow: 1;
+	flex-basis: 0;
+	position: relative;
+	padding: 0 10px;
+	overflow: hidden;
+	
+	@include breakpoint(medium){
+		padding: 50px 20px;
+	}
+	
+	@include breakpoint(large){
+		padding: 50px 20px 120px;
+	}
+	
+	@include breakpoint(xlarge){
+		padding: 40px 15px 160px;
+	}
+	
+	@include breakpoint(xxlarge){
+		padding: 40px 25px 160px;
+	}
+	.head{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		&--experiences{
+			justify-content: flex-end;
+		}
+	}
+	.popup__box {
+		max-width: 700px;
+	}
+}
+
+.chat-page{
+	.row{
+		max-width: 100%!important;
+	}
+}
+.chat-container {
+	display: flex;
+	width: 100%;
+	
+	@include breakpoint(medium){
+		min-height: calc(100vh - 71px);
+		padding: 0;
+	}
+	
+	@include breakpoint(large){
+		min-height: calc(100vh - 102px);
+	}
+}

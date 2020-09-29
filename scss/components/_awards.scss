@@ -1,0 +1,48 @@
+.awards {
+	&__slider {
+		.slick-list {
+			margin: 0 -13px;
+		}	
+	}
+	
+	&__slide {
+		padding: 13px 13px 20px;
+	}
+	
+	&__box {
+		background: $white;
+		border-radius: 17px;
+		box-shadow: 0 5px 13px rgba(164, 164, 164, 0.237708);
+	}
+	
+	&__img {
+		background: #fbfafa;
+		height: 145px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 6px 6px 0 0;
+	}
+	
+	&__textbox {
+		height: 75px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+	}
+	
+	.h5 {
+		display: block;
+		color: #06A590;
+		font-weight: 500;
+		text-align: center;
+		letter-spacing: 0.1px;
+	}
+	
+	&.style {
+		.awards__img {
+			background: $white;
+		}
+	}
+}

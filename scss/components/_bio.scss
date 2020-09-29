@@ -1,0 +1,218 @@
+.bio {
+	padding: 25px 0 0;
+	position: relative;
+	z-index: 6;
+	margin-bottom: 20px;
+	
+	@include breakpoint(medium){
+		margin-bottom: 40px;
+	}
+	
+	&__person {
+		position: relative;
+		background: $white;
+		border-radius: 17px;
+		box-shadow: 0 10px 20px rgba(164, 164, 164, 0.237708);
+		text-align: center;
+		margin-top: -135px;
+		margin-bottom: 20px;
+		padding: 80px 15px 5px;
+		
+		@include breakpoint(medium){
+			padding: 101px 15px 5px;
+			margin-bottom: 0;
+		}
+		
+		@include breakpoint(large){
+			padding: 130px 20px 15px;
+		}
+		
+		@include breakpoint(xlarge){
+			padding: 130px 20px 35px;
+		}
+		
+		@include breakpoint(xxlarge){
+			padding: 130px 35px 35px;
+		}
+	}
+	
+	&__img {
+		@include size(140px);
+		
+		border-radius: 100%;
+		overflow: hidden;
+		border: 8px solid $white;
+		position: absolute;
+		left: 50%;
+		top: -70px;
+		transform: translateX(-50%);
+		
+		@include breakpoint(large){
+			@include size(176px);
+			
+			top: -80px;
+		}
+		
+		img {
+			@include size(100%);
+			
+			object-fit: cover;
+			border-radius: 100%;
+		}
+	}
+	
+	&__textbox {
+		overflow: hidden;
+		
+		.h2 {
+			line-height: 1.1;
+			font-weight: 500;
+			color: #070707;
+			margin: 0 0 12px;
+			font-size: 25px;
+			
+			@include breakpoint(large){
+				font-size: 28px;
+			}
+			
+			@include breakpoint(xlarge){
+				font-size: 31px;
+			}
+		}
+	}
+	
+	&__text,
+	&__addr {
+		color: #9d9d9d;
+		font-size: 15px;
+		font-weight: 400;
+		font-style: normal;
+		margin: 0 0 5px;
+		display: block;
+		
+		@include breakpoint(xlarge){
+			font-size: 16px;
+		}
+	}
+	
+	&__addr {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0 20px;
+		
+		@include breakpoint(medium){
+			margin: 0 0 10px;
+		}
+		
+		@include breakpoint(large){
+			margin: 0 0 20px;
+		}
+		
+		.icon-pin {
+			font-size: 18px;
+			margin: 0 10px 0 0;
+			color: $primary-color;
+		}
+	}
+	
+	&__following {
+		@include listreset;
+		@include font(16px, 1.389);
+		
+		color: #9a9a9a;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+		letter-spacing: 0.6px;
+		margin: 0 0 20px;
+		
+		@include breakpoint(medium){
+			margin: 0 0 10px;
+		}
+		
+		@include breakpoint(large){
+			margin: 0 0 30px;
+		}
+		
+		@include breakpoint(xlarge){
+			font-size: 18px;
+		}
+		
+		li {
+			width: 50%;
+			font-weight: 500;
+			padding: 0 10px;
+			
+			@include breakpoint(medium){
+				width: 100%;
+				padding: 10px 0;
+			}
+			
+			@include breakpoint(large){
+				width: 50%;
+				padding: 0 10px;
+			}
+			
+			+ li {
+				border-left: 1px solid #d7d7d7;
+				
+				@include breakpoint(medium){
+					border-top: 1px solid #d7d7d7;
+					border-left: 0;
+				}
+				
+				@include breakpoint(large){
+					border-top: 0;
+					border-left: 1px solid #d7d7d7;
+				}
+			}
+			
+			span {
+				color: $primary-color;
+				display: block;
+			}
+		}
+	}
+	
+	&__buttons {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		
+		.button {
+			border-radius: 4px;
+			margin: 0 0 10px;
+			width: 100%;
+			
+			@include breakpoint(xlarge){
+				width: 48%;
+				margin: 0;
+			}
+			
+			&__text1 {
+				display: block;
+			}
+			
+			&__text2 {
+				display: none;
+			}
+			
+			&.following {
+				.button__text1 {
+					display: none;
+				}
+				
+				.button__text2 {
+					display: block;
+				}
+			}
+		}
+	}
+	
+	&__info {
+		p {
+			opacity: 0.77;
+		}
+	}
+}

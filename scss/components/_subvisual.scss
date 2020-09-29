@@ -1,0 +1,38 @@
+.subvisual {
+	overflow: hidden;
+	border-radius: 10px;
+	min-height: 220px;
+	display: flex;
+	align-items: center;
+	color: $white;
+	padding: 20px;
+	margin: 0 0 40px;
+	background: linear-gradient(90deg, rgba(32, 1, 63, 0.897673) 7.84%, rgba(16, 0, 32, 0.631343) 53.38%, rgba(0, 0, 0, 0.236478) 86.63%, rgba(0, 0, 0, 0.236478) 86.63%, rgba(0, 0, 0, 0.236478) 86.63%);
+	
+	@include breakpoint(medium){
+		min-height: 290px;
+		padding: 35px;
+		margin: 0 0 73px;
+	}
+	
+	@include breakpoint(large){
+		padding: 35px 80px;
+		min-height: 330px;
+	}
+	
+	@include breakpoint(xxlarge){
+		padding: 50px 80px 35px;
+	}
+	
+	h2 {
+		color: $white;
+		line-height: 1.2;
+		margin: 0;
+		text-align: center;
+		letter-spacing: -0.423077px;
+		
+		@include breakpoint(xxlarge){
+			font-size: 55px;
+		}
+	}
+}

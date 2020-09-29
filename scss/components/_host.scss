@@ -1,0 +1,98 @@
+.host {
+	@include listreset;
+	
+	margin: 0 0 20px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	
+	@include breakpoint(medium){
+		margin: -47px -5px 54px;
+		flex-flow: row nowrap;
+	}
+	
+	@include breakpoint(large){
+		margin: -47px -7px 54px;
+	}
+	
+	&__item {
+		width: 100%;
+		margin: 0 0 10px;
+		
+		@include breakpoint(medium){
+			width: 33.333%;
+			padding: 0 5px;
+			margin: 0;
+		}
+		
+		@include breakpoint(large){
+			padding: 0 7px;
+		}
+	}
+
+	&__box {
+		color: $white;
+		background: $black;
+		box-shadow: 0px 6px 14px rgba(123, 123, 123, 0.237708);
+		border-radius: 5px;
+		display: flex;
+		align-items: center;
+		height: 100%;
+		padding: 20px;
+		
+		@include breakpoint(medium){
+			padding: 20px 10px;
+		}
+		
+		@include breakpoint(xlarge){
+			padding: 25px 15px 17px;
+		}
+		
+		@include breakpoint(xxlarge){
+			padding: 25px 20px 17px;
+		}
+	}
+	
+	&__icon {
+		min-width: 40px;
+		text-align: center;
+		margin: 0 20px 0 0;
+		
+		@include breakpoint(medium){
+			min-width: 30px;
+			margin: 0 10px 0 0;
+		}
+		
+		@include breakpoint(large){
+			min-width: 35px;
+		}
+		
+		@include breakpoint(xlarge){
+			min-width: 40px;
+			margin: 0 15px 0 0;
+		}
+		
+		@include breakpoint(xxlarge){
+			min-width: 45px;
+		}
+	}
+
+	&__title {
+		@include font(15px, 1.471);
+
+		display: block;
+		font-weight: 600;
+		
+		@include breakpoint(xlarge){
+			font-size: 17px;
+		}
+	}
+	
+	&__subtext {
+		font-size: 14px;
+		
+		@include breakpoint(xlarge){
+			font-size: 16px;
+		}
+	}
+}

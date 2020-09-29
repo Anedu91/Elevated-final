@@ -1,0 +1,176 @@
+.steps {
+	@include font(12px, 1.5);
+	
+	width: 100%;
+	background: $black;
+	font-weight: 600;
+	color: $white;
+	padding: 25px 10px;
+	margin: 0 0 30px;
+	
+	@include breakpoint(medium){
+		width: 192px;
+		min-width: 192px;
+		font-size: 16px;
+		padding: 50px 20px;
+		margin: 0;
+	}
+	
+	@include breakpoint(large){
+		width: 250px;
+		min-width: 250px;
+		font-size: 18px;
+		padding: 60px 15px 50px 30px;
+	}
+	
+	@include breakpoint(xlarge){
+		font-size: 21px;
+		width: 300px;
+		min-width: 300px;
+		padding: 110px 15px 50px 30px;
+	}
+	
+	ul {
+		@include listreset;
+		
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		
+		@include breakpoint(medium){
+			display: block;
+			text-align: left;
+		}
+	}
+	
+	li {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		
+		@include breakpoint(medium){
+			flex-flow: row nowrap;
+			margin: 0 0 48px;
+		}
+		
+		+ li {
+			.steps__num {
+				&:before {
+					position: absolute;
+					left: 50%;
+					bottom: 100%;
+					transform: translate(-50%);
+					background: $white;
+					content: '';
+					width: 4px;
+					height: 48px;
+					display: none;
+					
+					@include breakpoint(medium){
+						display: block;
+					}
+				}
+			}
+		}
+		
+		&.current,
+		&.visited {
+			color: #1adaa7;
+			
+			.steps__num {
+				color: $white;
+				background: linear-gradient(165.49deg, #1BDBB6 10.28%, #15DA97 86.99%, #0ED973 107.44%, #00D727 127.51%);
+				
+				&:before {
+					background: #7aead4;
+				}
+			}
+		}
+	}
+	
+	&__num {
+		@include size(32px);
+		@include font(16px, 1);
+		
+		border-radius: 100%;
+		background: $white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $black;
+		padding: 2px 0 0;
+		position: relative;
+		margin: 0 auto 10px;
+		font-weight: 700;
+		
+		@include breakpoint(medium){
+			@include size(39px);
+			
+			margin: 0 15px 0 0;
+			font-size: 20px;
+		}
+		
+		@include breakpoint(large){
+			@include size(44px);
+			
+			font-size: 30px;
+			margin: 0 20px 0 0;
+		}
+		
+		@include breakpoint(xlarge){
+			@include size(65px);
+			
+			font-size: 45px;
+			padding: 5px 0 0;
+			margin: 0 30px 0 0;
+		}
+	}
+	
+	&__text {
+		width: 100%;
+		display: block;
+		
+		@include breakpoint(medium){
+			width: auto;
+		}
+	}
+	&__icon{
+		@include size(65px,65px);
+		margin: 0 30px 0 0;	
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			max-width: 100%;
+		}	
+	}
+	&--dashboard{
+		@include breakpoint(xlarge){
+			font-size: 21px;
+			width: 225px;
+			min-width: 225px;
+			padding: 110px 15px 50px 30px;
+		}
+
+		.steps__icon{
+			margin: 0;
+			margin-right: 20px;
+			@include size(20px, 20px);
+		}
+		img{
+			filter: brightness(0) invert(1);
+		}
+		li{
+			display: flex;
+			justify-content: center;
+			@include breakpoint(medium){
+				justify-content: flex-start;
+			}
+			&.current{
+				img{
+					filter: none;
+				}
+			}
+		}
+	}
+}

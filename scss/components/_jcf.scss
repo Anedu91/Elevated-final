@@ -1,0 +1,819 @@
+/* custom select styles */
+
+.jcf-select {
+	display: block;
+	background: #f7f8fa;
+	border: 1px solid #dfdfdf;
+	border-radius: 10px;
+	position: relative;
+	height: 42px;
+	margin: 0;
+	
+	@include breakpoint(medium){
+		height: 50px;
+	}
+
+	&.jcf-focus {
+		background: $white;
+		border-color: $black;
+		
+		.jcf-select-text {
+			color: $black;
+		}
+	}
+}
+
+.jcf-select select {
+	z-index: 1;
+	left: 0;
+	top: 0;
+}
+
+.jcf-select .jcf-select-text {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: default;
+	display: block;
+	font-size: 16px;
+	line-height: 28px;
+	font-weight: 400;
+	letter-spacing: 0.58px;
+	color: #bbb;
+	padding: 7px 0;
+	cursor: pointer;
+	margin: 0 60px 0 15px;
+	
+	@include breakpoint(medium){
+		margin: 0 75px 0 15px;
+		font-size: 18px;
+		padding: 11px 0;
+	}
+}
+
+.jcf-select .jcf-select-opener {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 50px;
+	cursor: pointer;
+	border-radius: 0 10px 10px 0;
+	background: linear-gradient(167.98deg, #1BDBB6 10.28%, #15DA97 86.99%, #0ED973 107.44%, #00D727 127.51%);
+
+	@include breakpoint(medium){
+		width: 62px;
+	}
+
+	&:after {
+		@include font(30px, 1);
+		
+		
+		position: absolute;
+		right: 10px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $white;
+		font-family: 'icomoon';
+		content: '\e905';
+
+		@include breakpoint(medium){
+			right: 15px;
+		}
+	}
+}
+
+body>.jcf-select-drop {
+    position: absolute;
+    margin: 0;
+    z-index: 9999;
+}
+
+body>.jcf-select-drop.jcf-drop-flipped {
+    margin: 1px 0 0;
+}
+
+.jcf-select .jcf-select-drop {
+    position: absolute;
+    margin-top: 0px;
+    z-index: 9999;
+    top: 100%;
+    left: -1px;
+    right: -1px;
+}
+
+.jcf-select .jcf-drop-flipped {
+    bottom: 100%;
+    top: auto;
+}
+
+.jcf-select-drop .jcf-select-drop-content {
+    border: 0;
+}
+
+/* multiple select styles */
+
+.jcf-list-box {
+    overflow: hidden;
+    display: inline-block;
+    border: 1px solid #b8c3c9;
+    min-width: 200px;
+    margin: 0 15px;
+}
+
+/* select options styles */
+
+.jcf-list {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	background: #fff;
+	line-height: 20px;
+	font-size: 14px;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0 2px 7px 5px rgba(234, 234, 234, 0.5);
+	border-radius: 10px;
+	
+	@include breakpoint(medium){
+		font-size: 16px;
+		line-height: 24px;
+	}
+}
+
+.jcf-list .jcf-list-content {
+	vertical-align: top;
+	display: inline-block;
+	overflow: auto;
+	width: 100%;
+}
+
+.jcf-list ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.jcf-list ul li {
+	overflow: hidden;
+	display: block;
+}
+
+.jcf-list .jcf-overflow {
+  overflow: auto;
+}
+
+.jcf-list .jcf-option {
+	overflow: hidden;
+	cursor: default;
+	display: block;
+	padding: 12px 15px;
+	color: #656565;
+	height: 1%;
+}
+
+.jcf-list .jcf-disabled {
+	background: #fff !important;
+	color: #aaa !important;
+}
+
+.jcf-select-drop .jcf-hover,
+.jcf-list-box .jcf-selected {
+	background: #f2f9f8;
+}
+
+.jcf-list .jcf-optgroup-caption {
+    white-space: nowrap;
+    font-weight: bold;
+    display: block;
+    padding: 5px 9px;
+    cursor: default;
+    color: #000;
+}
+
+.jcf-list .jcf-optgroup .jcf-option {
+    padding-left: 30px;
+}
+
+/* custom number input styles */
+
+.jcf-number {
+	display: block;
+	position: relative;
+	height: 30px;
+	width: 120px;
+	padding: 0 32px;
+}
+
+.jcf-number input {
+	-moz-appearance: textfield;
+}
+
+.jcf-number input::-webkit-inner-spin-button,
+.jcf-number input::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+}
+
+.jcf-number input {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 0;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-size: 20px;
+	color: #090808;
+	letter-spacing: 0.58px;
+	text-align: center;
+	box-shadow: none;
+	background: $white;
+	
+	@include breakpoint(medium){
+		font-size: 23px;
+	}
+}
+
+.jcf-number .jcf-btn-dec,
+.jcf-number .jcf-btn-inc {
+	@include size(26px);
+	
+	position: absolute;
+	background: $white;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	border-radius: 100%;
+	border: 1px solid $black;
+	cursor: pointer;
+}
+
+.jcf-number .jcf-btn-dec {
+	left: 0;
+}
+
+.jcf-number .jcf-btn-dec:hover,
+.jcf-number .jcf-btn-inc:hover {
+  background: rgba(17, 187, 221, 0.42);
+	border-color: rgba(17, 187, 221, 0.42); 
+}
+
+.jcf-number.jcf-disabled .jcf-btn-dec:hover,
+.jcf-number.jcf-disabled .jcf-btn-inc:hover {
+	background: $white;
+}
+
+.jcf-number .jcf-btn-dec:before,
+.jcf-number .jcf-btn-inc:after,
+.jcf-number .jcf-btn-inc:before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 13px;
+	height: 1px;
+	background: $black;
+}
+
+.jcf-number .jcf-btn-inc:after {
+	width: 1px;
+	height: 12px;
+}
+
+.jcf-number.jcf-disabled .jcf-btn-dec:before,
+.jcf-number.jcf-disabled .jcf-btn-inc:before,
+.jcf-number .jcf-btn-dec.jcf-disabled:before,
+.jcf-number .jcf-btn-inc.jcf-disabled:before {
+	opacity: 1;
+}
+
+.jcf-number.jcf-disabled input {
+	background: $white;
+}
+
+/* custom scrollbars styles */
+
+.jcf-scrollable-wrapper {
+	box-sizing: content-box;
+	position: relative;
+}
+
+.jcf-scrollbar-vertical {
+	position: absolute;
+	cursor: default;
+	background: #eee;
+	width: 5px;
+	bottom: 0;
+	right: 0;
+	top: 0;
+	border-radius: 15px;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-dec,
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	background: transparent;
+	height: 1px;
+	width: 5px;
+	left: 0;
+	top: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-inc {
+	top: auto;
+	bottom: 0;
+}
+
+.jcf-scrollbar-vertical .jcf-scrollbar-handle {
+	background: #c4c4c4;
+	height: 1px;
+	width: 5px;
+	border-radius: 15px;
+}
+
+.jcf-scrollbar-horizontal {
+	position: absolute;
+	background: #e3e3e3;
+	right: auto;
+	top: auto;
+	left: 0;
+	bottom: 0;
+	width: 1px;
+	height: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-dec,
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+	background: #bbb;
+	height: 14px;
+	width: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-inc {
+	left: auto;
+	right: 0;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-slider {
+	display: inline-block;
+	position: relative;
+	height: 14px;
+}
+
+.jcf-scrollbar-horizontal .jcf-scrollbar-handle {
+	position: absolute;
+	background: #888;
+	height: 14px;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-handle {
+	visibility: hidden;
+}
+
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-dec,
+.jcf-scrollbar.jcf-inactive .jcf-scrollbar-inc {
+	background: #e3e3e3;
+}
+
+/* custom file input styles */
+
+.jcf-file {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 15px;
+	background: #f7f8fa;
+	border: 2px dashed #c0c0c1;
+	cursor: pointer;
+	padding: 15px;
+	height: 180px;
+	
+	@include breakpoint(medium){
+		height: 250px;
+		padding: 25px;
+	}
+	
+	@include breakpoint(large){
+		height: 335px;
+	}
+	
+	.jcf-real-element {
+		position: absolute;
+		font-size: 200px;
+		height: 100%;
+		margin: 0;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+	}
+	
+	.jcf-fake-input {
+		@include font(16px, 1.280);
+		
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		text-align: center;
+		color: #b1b1b1;
+		max-width: 380px;
+		margin: 0 auto;
+		
+		@include breakpoint(medium){
+			font-size: 18px;
+		}
+		
+		@include breakpoint(large){
+			font-size: 21px;
+		}
+		
+		@include breakpoint(xlarge){
+			font-size: 25px;
+		}
+		
+		&:before {
+			@include font(35px, 1);
+			
+			font-family: 'icomoon';
+			content: '\e928';
+			color: #d4d4d4;
+			display: block;
+			margin: 0 auto 25px;
+			
+			@include breakpoint(medium){
+				font-size: 55px;
+			}
+			
+			@include breakpoint(large){
+				font-size: 75px;
+			}
+		}
+	}
+	
+	.jcf-upload-button {
+		display: none;
+		vertical-align: top;
+		white-space: nowrap;
+		overflow: hidden;
+		margin: 0 0 0 -1px;
+		padding: 0 10px;
+		line-height: 32px;
+		height: 32px;
+	}
+}
+
+
+.file-logo {
+	.jcf-file {
+		height: 150px;
+		background: $white;
+		justify-content: flex-start;
+		
+		@include breakpoint(medium){
+			height: 200px;
+		}
+		
+		@include breakpoint(large){
+			height: 250px;
+		}
+		
+		.jcf-fake-input {
+			order: 2;
+			margin: 0;
+			max-width: 530px;
+			text-align: left;
+			
+			&:before {
+				display: none;
+			}
+		}
+		
+		.jcf-upload-button {
+			display: block;
+			position: relative;
+			order: 1;
+			height: auto;
+			padding: 0;
+			margin: 0 15px 0 0;
+			min-width: 80px;
+			pointer-events: none;		
+
+			@include breakpoint(medium){
+				margin: 0 25px 0 0;
+			}
+			
+			@include breakpoint(large){
+				margin: 0 55px 0 0;
+			}
+			
+			.jcf-button-content{
+				display: block;
+				border-radius: 50%;
+				background-size: cover;
+				background: url('../images/avatar-albert.jpg') no-repeat;
+				background-size: 100% 100%;
+				@include size(80px);
+				@include breakpoint(medium){
+					 		@include size(120px);
+						}
+						
+				 	@include breakpoint(large){
+					 		@include size(160px);
+					 	}
+			}
+			
+			&:after {
+				@include font(26px, 1);				
+				color: #55dbc9;
+				font-family: 'icomoon';
+				content: '\e910';
+				position: absolute;
+				right: 5px;
+				bottom: 5px;
+				z-index: 100;
+				@include breakpoint(medium){
+					font-size: 30px;
+				}
+			}
+		}
+	}
+}
+
+.file-speaker {
+	.jcf-file {
+		height: 70px;
+		background: $white;
+		justify-content: flex-start;
+		border: 0;
+		padding: 0;
+		
+		@include breakpoint(medium){
+			height: 70px;
+		}
+		
+		@include breakpoint(large){
+			height: 70px;
+		}
+		
+		.jcf-fake-input {
+			order: 2;
+			margin: 0;
+			font-size: 13px;
+			line-height: 19px;
+			font-weight: 500;
+			max-width: 530px;
+			text-align: left;
+		
+			@include breakpoint(medium){
+				font-size: 13px;
+			}
+
+			@include breakpoint(large){
+				font-size: 13px;
+			}
+
+			@include breakpoint(xlarge){
+				font-size: 13px;
+			}
+			
+			&:before {
+				display: none;
+			}
+		}
+		
+		.jcf-upload-button {
+			display: block;
+			position: relative;
+			order: 1;
+			padding: 0;
+			margin: 0 15px 0 0;
+			height: auto;
+			width: 95px;
+			// @include size(70px);
+			// pointer-events: none;
+			// background: url('../images/avatar-albert.jpg') no-repeat;
+			// background-size: 100% 100%;
+			// border-radius: 50%;
+			
+			@include breakpoint(medium){
+				// @include size(70px);
+				margin: 0 15px 0 0;
+			}
+			
+			@include breakpoint(large){
+				// @include size(90px);
+				margin: 0 15px 0 0;
+			}
+			.jcf-button-content{
+				display: block;
+				@include size(70px);
+				pointer-events: none;
+				background: url('../images/avatar-albert.jpg') no-repeat;
+				background-size: 100% 100%;
+				border-radius: 50%;
+			}
+			
+			// &:before {
+			// 	@include size(70px);
+				
+			// 	display: block;
+			// 	background: url('../images/avatar-albert.jpg') no-repeat;
+			// 	background-size: 100% 100%;
+			// 	content: '';
+			// 	border-radius: 100%;
+				
+			// 	@include breakpoint(medium){
+			// 		@include size(70px);
+			// 	}
+				
+			// 	@include breakpoint(large){
+			// 		@include size(70px);
+			// 	}
+			// }
+			
+			&:after {
+				@include font(18px, 1);
+				
+				color: #55dbc9;
+				font-family: 'icomoon';
+				content: '\e910';
+				position: absolute;
+				right: 5px;
+				bottom: 5px;
+				
+				@include breakpoint(medium){
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+.logo-upload {
+	.jcf-file {
+		background: #fff;
+		border-radius: 0;
+		background: $white;
+		border: 0;
+		cursor: pointer;
+		padding: 0;
+		height: auto;
+		width: auto;
+		display: inline-flex;
+
+		@include breakpoint(medium){
+			height: auto;
+			padding: 0;
+		}
+
+		@include breakpoint(large){
+			height: auto;
+		}
+		
+		.jcf-fake-input {
+			order: 2;
+			margin: 0;
+			font-size: 13px;
+			line-height: 19px;
+			font-weight: 500;
+			text-align: left;
+
+			@include breakpoint(medium){
+				font-size: 13px;
+			}
+
+			@include breakpoint(large){
+				font-size: 13px;
+			}
+
+			@include breakpoint(xlarge){
+				font-size: 13px;
+			}
+
+			&:before {
+				display: none;
+			}
+		}
+
+		.jcf-upload-button {
+			display: block;
+			position: relative;
+			order: 1;
+			padding: 8px 15px;
+			margin: 0 15px 0 0;
+			min-width: 180px;
+			pointer-events: none;
+			background: #56a8b3;
+			border-radius: 36px;
+			font-size: 16px;
+			line-height: 1.5;
+			text-align: center;
+			color: $white;
+			font-weight: 600;
+			height: auto;
+			letter-spacing: 0.0914286px;
+
+			@include breakpoint(medium){
+				min-width: 180px;
+				margin: 0 15px 0 0;
+			}
+
+			@include breakpoint(large){
+				min-width: 180px;
+				margin: 0 15px 0 0;
+			}
+		}
+		
+		&:hover {
+			.jcf-upload-button {
+				background: #4998a3;
+			}
+		}
+	}
+}
+
+.full-width {
+	.jcf-file {
+		padding: 0;
+
+		.jcf-fake-input:before {
+			display: block;
+			width: 100%;
+			margin: 0 auto -20px;
+
+			@include breakpoint(medium) {
+				margin: 0 auto -120px;
+			}
+		}
+	}
+
+	.jcf-fake-input {
+		max-width: inherit;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		background-image: url(../images/bgcover.jpg);
+		background-size: cover;
+	}
+}
+
+/*DASHBOARD PAGE*/
+.jcf-select-dashboard{
+	border: none;
+	background: none;
+	height: auto;
+	.jcf-select-text{
+		color: #AFAFAF;
+		border: none;
+		padding: 0;
+		margin: 0 15px 0 20px;
+		@include font(11px);
+		min-width: 100px;
+		max-width: 100px;
+		text-align: right;
+	}
+	.jcf-select-opener{
+		background: none;
+		border-radius: 0;
+		// min-width: 180px;
+		// max-width: 180px;
+		&::after{
+			right: 0;
+			font-size: 15px;
+			color: #AFAFAF;
+		}
+	}
+	&.jcf-focus{
+		background: none;
+	}
+}
+
+.jcf-select-experiences-filter{
+	background: #fff;
+	border-radius: 0;
+	min-width: 200px;
+	@include breakpoint(medium){
+		min-width: 240px;
+	}
+	.jcf-select-opener{
+		background: none;
+		border-radius: 0;
+		width: 10px;
+		&::after{
+			right: 10 px;
+			font-size: 20px;
+			color: #AFAFAF;
+		}
+	}
+
+}

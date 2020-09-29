@@ -1,0 +1,84 @@
+.speakerslist {
+	@include listreset;
+	
+	li {
+		display: flex;
+		position: relative;
+		padding: 12px 50px 12px 15px;
+		
+		@include breakpoint(large){
+			padding: 12px 70px 12px 25px;
+		}
+		
+		&:hover {
+			background: #f2f9f8;
+			
+			.speakerslist__delete {
+				opacity: 1;	
+			}
+		}
+	}
+	
+	&__img {
+		@include size(55px);
+		
+		overflow: hidden;
+		min-width: 55px;
+		border-radius: 100%;
+		margin: 0 15px 0 0;
+		
+		@include breakpoint(large){
+			@include size(70px);
+			
+			min-width: 70px;
+			margin: 0 20px 0 0;
+		}
+		
+		img {
+			@include img;
+		}
+	}
+	
+	&__text {
+		flex-grow: 1;
+		flex-basis: 0;
+	}
+	
+	&__title,
+	&__email {
+		@include font(16px, 1.5);
+		
+		color: #0b0b0b;
+		display: block;
+		font-weight: 600;
+		
+		@include breakpoint(large){
+			font-size: 18px;
+		}
+	}
+	
+	&__email {
+		opacity: 0.8;
+		color: #090909;
+		font-weight: 500;
+	}
+	
+	p {
+		@include font(14px, 1.571);
+		
+		margin: 0;
+	}
+	
+	&__delete {
+		@include font(20px, 1);
+		
+		position: absolute;
+		right: 15px;
+		top: 12px;
+		opacity: 0;
+		
+		@include breakpoint(large){
+			right: 20px;
+		}
+	}
+}

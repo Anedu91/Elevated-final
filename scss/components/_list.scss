@@ -1,0 +1,39 @@
+.list {
+	@include listreset;
+	
+	overflow: hidden;
+	margin: 0 0 10px;
+	
+	@include breakpoint(medium){
+		margin: 0 0 21px;
+		padding: 0 0 0 15px;
+	}
+	
+	&__item {
+		position: relative;
+		padding: 2px 0 2px 40px;
+		margin: 0 0 15px;
+		
+		@include breakpoint(medium){
+			margin: 0 0 19px;
+		}
+		
+		&:before {
+			@include font(9px, 1);
+			@include size(26px);
+			
+			position: absolute;
+			left: 0;
+			top: 8px;
+			font-family: 'icomoon';
+			content: '\e912';
+			border: 1px solid $dark-gray;
+			color: $dark-gray;
+			border-radius: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 2px 0 0 2px;
+		}
+	}
+}

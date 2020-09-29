@@ -1,0 +1,76 @@
+.slideshow {
+	overflow: hidden;
+	border-radius: 10px;
+	
+	img {
+		@include img;
+		
+		border-radius: 10px;
+	}
+	
+	&__caption {
+		color: $white;
+		font-size: 14px;
+		font-weight: 500;
+		display: block;
+		text-align: center;
+		padding: 15px 0 20px;
+		
+		@include breakpoint(medium){
+			font-size: 16px;
+		}
+	}
+	
+	&__nav {
+		margin: 0 -7px 30px;
+		
+		.slick-slide {
+			padding: 0 7px;
+		}
+		
+		img {
+			@include img;
+
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		
+		.slick-arrow {
+			@include animate(none);
+			@include size(28px);
+			
+			top: 50%;
+			z-index: 5;
+			border: 0;
+			transform: translateY(-50%);
+			background: linear-gradient(165.49deg, #1BDBB6 10.28%, #15DA97 86.99%, #0ED973 107.44%, #00D727 127.51%);
+			
+			@include breakpoint(medium){
+				@include size(36px);
+			}
+			
+			&:hover {
+				opacity: 1;
+				background: $primary-color;
+			}
+			
+			&.slick-prev {
+				right: auto;
+				left: -6px;
+				
+				@include breakpoint(medium){
+					right: auto;
+					left: -12px;
+				}
+			}
+			
+			&.slick-next {
+				right: -6px;
+				
+				@include breakpoint(medium){
+					right: -12px;
+				}
+			}
+		}
+	}
+}

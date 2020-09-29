@@ -1,0 +1,205 @@
+.agenda {
+	&__head {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-between;
+		margin: 0 0 20px;
+		
+		@include breakpoint(medium){
+			flex-flow: row nowrap;
+			margin: 0;
+		}
+	}
+	
+	.jcf-select {
+		width: 100%;
+		border: 1px solid #5f31a9;
+		height: 42px;
+		margin: 0;
+		border-radius: 5px;
+		background: $white;
+	
+		@include breakpoint(medium){
+			height: 42px;
+			width: auto;
+			max-width: 194px;
+		}
+		
+		&.jcf-focus {
+			.jcf-select-opener {
+				&:after {
+					color: $black;
+				}
+			}
+		}
+		
+		.jcf-select-text {
+			@include font(14px, 28px);
+			
+			color: $purple;
+			font-weight: 600;
+			margin: 0 32px 0 15px;
+			
+			@include breakpoint(medium){
+				font-size: 14px;
+				min-width: 194px;
+				padding: 7px 0;
+				margin: 0 32px 0 15px;
+			}
+		}
+		
+		.jcf-select-opener {
+			border-radius: 0 5px 5px 0;
+			background: $white;
+			width: 32px;
+			
+			@include breakpoint(medium){
+				width: 32px;
+			}
+			
+			&:after {
+				font-size: 20px;
+				color: $purple;
+				
+				@include breakpoint(medium){
+					right: 10px;
+				}
+			}
+		}
+	}
+	
+	&__content {
+		background: linear-gradient(347.96deg, #985FD4 -10.8%, #4A1384 30.49%, #380071 52.55%, #1F003F 78.22%, #000000 108.44%);
+		box-shadow: 0 2px 23px rgba(71, 71, 71, 0.5);
+		border-radius: 10px;
+		color: $white;
+		padding: 30px 15px 15px;
+		
+		@include breakpoint(medium){
+			padding: 35px 25px 20px;
+			border-radius: 20px;
+		}
+		
+		@include breakpoint(xlarge){
+			padding: 50px 40px 20px;
+			border-radius: 30px;
+		}
+		
+		@include breakpoint(xxlarge){
+			padding: 50px 65px 20px;
+		}
+		
+		h2 {
+			line-height: 1.15;
+			margin: 0 0 25px;
+			letter-spacing: -0.423077px;
+			
+			@include breakpoint(medium){
+				margin: 0 0 50px;
+			}
+			
+			@include breakpoint(xlarge){
+				font-size: 47px;
+			}
+			
+			span {
+				display: block;
+				font-size: 20px;
+				font-weight: 500;
+				letter-spacing: -0.146154px;
+				
+				@include breakpoint(large){
+					font-size: 24px;
+				}
+			}
+		}
+	}
+	
+	&__list {
+		@include listreset;
+		
+		li {
+			display: flex;
+			align-items: flex-start;
+			flex-flow: row wrap;
+			
+			@include breakpoint(large){
+				margin: 0 0 15px;
+				flex-flow: row nowrap;
+			}
+		}
+	}
+	
+	&__time {
+		min-width: 140px;
+		font-weight: 600;
+		display: block;
+		font-size: 16px;
+		line-height: 1.4;
+		letter-spacing: -0.146154px;
+		margin: 0 0 15px;
+		
+		@include breakpoint(large){
+			min-width: 140px;
+			margin: 0;
+		}
+		
+		@include breakpoint(xlarge){
+			min-width: 170px;
+			font-size: 19px;
+		}
+	}
+	
+	&__textbox {
+		@include breakpoint(large){
+			padding: 0 0 0 40px;
+		}
+		
+		h4 {
+			font-weight: 500;
+			letter-spacing: -0.146154px;
+		}
+	}
+	
+	&__authors {
+		margin: 0 0 12px;
+		display: flex;
+		align-items: center;
+	}
+	
+	&__img {
+		@include size(22px);
+		
+		border-radius: 100%;
+		overflow: hidden;
+		background: $light-gray02;
+		margin: 0 8px 0 0;
+		box-shadow: 0 0 5px rgba(216,216,216,0.5);
+		
+		img {
+			@include size(100%);
+			
+			border-radius: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	
+	&__name {
+		letter-spacing: 1px;
+		font-size: 14px;
+		line-height: 19px;
+	}
+	
+	p {
+		@include font(15px, 1.316);
+		
+		@include breakpoint(large){
+			font-size: 16px;
+		}
+		
+		@include breakpoint(xlarge){
+			font-size: 19px;
+		}
+	}
+}

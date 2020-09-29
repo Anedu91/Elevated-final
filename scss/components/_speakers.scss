@@ -1,0 +1,70 @@
+.speakers {
+	&__slide {
+		margin: 0 10px 0 0;
+		
+		&:nth-child(even) {
+			@include breakpoint(medium){
+				padding-top: 60px;
+			}
+		}
+	}
+	
+	&__box {
+		overflow: hidden;
+	}
+	
+	&__img {
+		@include size(180px);
+		
+		border: 4px solid $purple01;
+		background: $light-gray02;
+		border-radius: 100%;
+		position: relative;
+		overflow: hidden;
+		padding: 5px;
+		margin: 0 auto 28px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		
+		@include breakpoint(xxlarge){
+			@include size(194px);
+		}
+		
+		img {
+			border-radius: 100%;
+			position: relative;
+		}
+		
+		&:before {
+			@include position(0);
+			
+			border: 5px solid $white;
+			border-radius: 100%;
+			content: '';
+		}
+	}
+	
+	&__textbox {
+		overflow: hidden;
+		text-align: center;
+		
+		h4 {
+			font-weight: 600;
+			color: $light-gray03;
+		}
+		
+		p {
+			line-height: 1.4;
+			margin: 0;
+		}
+	}
+	
+	&__link {
+		font-size: 14px;
+		font-weight: 500;
+		color: $purple01;
+		
+		&:hover {
+			color: $primary-color;
+		}
+	}
+}
