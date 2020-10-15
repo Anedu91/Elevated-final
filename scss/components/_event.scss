@@ -1,107 +1,130 @@
 .event {
-	background: $white;
-	border-radius: 10px;
-	position: relative;
-	margin: 0 0 40px;
-	padding: 101px 15px 20px;
-	box-shadow: 0 1px 20px rgba(164, 164, 164, 0.237708);
-	
-	@include breakpoint(medium){
-		margin-top: -145px;
-	}
-	
-	@include breakpoint(large){
-		padding: 101px 25px 20px;
-	}
-	
-	@include breakpoint(xxlarge){
-		padding: 101px 35px 20px;
-	}
-	
-	h3 {
-		margin: 0 0 2px;
-		color: $dark-gary01;
-	}
-	
-	&__logo {
-		@include size(140px);
-		
-		background: $black;
-		border-radius: 100%;
-		border: 5px solid $white;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		overflow: hidden;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		top: -73px;
-		
-		@include breakpoint(large){
-			@include size(176px);
-			
-			border-width: 8px;
-			top: -93px;
-		}
-	}
-	
-	&__date {
-		@include font(13px, 1.5);
-		
-		color: #888;
-		display: block;
-		font-weight: 400;
-		letter-spacing: 0.6px;
-		margin: 0 0 2px;
-		
-		@include breakpoint(large){
-			font-size: 15px;
-		}
-		
-		@include breakpoint(xlarge){
-			font-size: 17px;
-		}
-		
-		@include breakpoint(xxlarge){
-			font-size: 20px;
-		}
-	}
-	
-	&__link {
-		font-size: 14px;
-		color: $purple;
-		display: inline-block;
-		margin: 0 0 30px;
-		letter-spacing: 0.48px;
-		
-		@include breakpoint(large){
-			font-size: 16px;
-			margin: 0 0 43px;
-		}
-		
-		&:hover {
-			color: $primary-color;
-		}
-	}
-	
-	&__price {
-		font-size: 17px;
-		display: block;
-		font-weight: 500;
-		letter-spacing: 0.63px;
-		margin: 0 0 30px;
-		
-		@include breakpoint(large){
-			font-size: 19px;
-		}
-		
-		@include breakpoint(xlarge){
-			font-size: 23px;
-		}
-	}
-	
-	.button {
-		margin: 0;
-	}
+  background: $white;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 0 40px;
+  padding: 101px 15px 20px;
+  box-shadow: 0 1px 20px rgba(164, 164, 164, 0.237708);
+
+  @include breakpoint(medium) {
+    margin-top: -145px;
+  }
+
+  @include breakpoint(large) {
+    padding: 101px 25px 20px;
+  }
+
+  @include breakpoint(xxlarge) {
+    padding: 101px 35px 20px;
+  }
+
+  h3 {
+    margin: 0 0 2px;
+    color: $dark-gary01;
+  }
+
+  &__logo {
+    @include size(140px);
+
+    background: $black;
+    border-radius: 100%;
+    border: 5px solid $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -73px;
+
+    @include breakpoint(large) {
+      @include size(176px);
+
+      border-width: 8px;
+      top: -93px;
+    }
+  }
+
+  &__date {
+    @include font(13px, 1.5);
+
+    color: #888;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    margin: 0 0 2px;
+
+    @include breakpoint(large) {
+      font-size: 15px;
+    }
+
+    @include breakpoint(xlarge) {
+      font-size: 17px;
+    }
+
+    @include breakpoint(xxlarge) {
+      font-size: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $purple;
+    display: inline-block;
+    margin: 0 0 30px;
+    letter-spacing: 0.48px;
+    @include breakpoint(large) {
+      font-size: 16px;
+      margin: 0 0 43px;
+    }
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &__price {
+    font-size: 17px;
+    display: block;
+    font-weight: 500;
+    letter-spacing: 0.63px;
+    margin: 0 0 30px;
+
+    @include breakpoint(large) {
+      font-size: 19px;
+    }
+
+    @include breakpoint(xlarge) {
+      font-size: 23px;
+    }
+  }
+
+  .button {
+    margin: 0;
+
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    z-index: 100;
+    @include breakpoint(medium) {
+      position: static;
+    }
+  }
+}
+
+.event--fixed .event {
+  @include breakpoint(medium) {
+    position: fixed;
+    top: 28vw;
+  }
+  @include breakpoint(xlarge) {
+    top: 20vw;
+  }
+  @include breakpoint(xxlarge) {
+    top: 18vw;
+  }
+  @include breakpoint(xxxlarge) {
+    top: 15vw;
+  }
 }

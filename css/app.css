@@ -12081,6 +12081,37 @@ select:focus {
 }
 .event .button {
   margin: 0;
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  z-index: 100;
+}
+@media print, screen and (min-width: 48em) {
+  .event .button {
+    position: static;
+  }
+}
+
+@media print, screen and (min-width: 48em) {
+  .event--fixed .event {
+    position: fixed;
+    top: 28vw;
+  }
+}
+@media screen and (min-width: 75em) {
+  .event--fixed .event {
+    top: 20vw;
+  }
+}
+@media screen and (min-width: 90em) {
+  .event--fixed .event {
+    top: 18vw;
+  }
+}
+@media screen and (min-width: 103.125em) {
+  .event--fixed .event {
+    top: 15vw;
+  }
 }
 
 .social {
@@ -12523,6 +12554,7 @@ select:focus {
 
 .sidebar {
   padding-top: 60px;
+  position: relative;
 }
 @media print, screen and (min-width: 48em) {
   .sidebar {
